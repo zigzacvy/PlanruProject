@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Planru.Core.Services
+{
+    /// <summary>
+    /// Data transfer object
+    /// </summary>
+    /// <typeparam name="TId">The type of data key</typeparam>
+    public class DataTransferObject<TId>
+    {
+        public TId Id { get; set; }
+    }
+}
