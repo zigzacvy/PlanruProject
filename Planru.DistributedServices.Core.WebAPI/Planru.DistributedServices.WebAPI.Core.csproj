@@ -7,8 +7,8 @@
     <ProjectGuid>{EACE8912-3274-4AC1-860C-90458F266F24}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Planru.DistributedServices.Core.WebAPI</RootNamespace>
-    <AssemblyName>Planru.DistributedServices.Core.WebAPI</AssemblyName>
+    <RootNamespace>Planru.DistributedServices.WebAPI.Core</RootNamespace>
+    <AssemblyName>Planru.DistributedServices.WebAPI.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
