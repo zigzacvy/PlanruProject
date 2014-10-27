@@ -14,9 +14,9 @@ namespace Planru.Core.Persistence
     /// Repository base class
     /// </summary>
     /// <typeparam name="TEntity">The type of underlying entity in this repository</typeparam>
-    /// <typeparam name="TId">The type of entity's Id</typeparam>
-    public class Repository<TEntity, TId> : IRepository<TEntity, TId>
-        where TEntity : Entity<TEntity, TId>
+    /// <typeparam name="TID">The type of entity's Id</typeparam>
+    public class Repository<TEntity, TID> : IRepository<TEntity, TID>
+        where TEntity : Entity<TID>
     {
         #region Members
 
@@ -103,7 +103,7 @@ namespace Planru.Core.Persistence
             }
         }
 
-        public virtual TEntity Get(TId id)
+        public virtual TEntity Get(TID id)
         {
             //if (id != Guid.Empty)
             return GetSet().Find(id);

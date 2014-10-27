@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Planru.Core.Domain;
 
-namespace Planru.Plugins.Default.Domain
+namespace Planru.Plugins.Main.Domain
 {
-    public class User : Entity<User, int>
+    public class User : Entity<int>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

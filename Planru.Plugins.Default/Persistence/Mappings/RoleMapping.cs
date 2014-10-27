@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Default.Persistence.Mappings
+namespace Planru.Plugins.Main.Persistence.Mappings
 {
-    class RoleMapping
+    public class RoleMapping
     {
     }
 }

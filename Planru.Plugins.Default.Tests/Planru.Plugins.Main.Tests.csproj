@@ -6,8 +6,8 @@
     <ProjectGuid>{542A22A6-2691-498D-B7D6-0F5D341C9263}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Planru.Plugins.Default.Tests</RootNamespace>
-    <AssemblyName>Planru.Plugins.Default.Tests</AssemblyName>
+    <RootNamespace>Planru.Plugins.Main.Tests</RootNamespace>
+    <AssemblyName>Planru.Plugins.Main.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -51,7 +51,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Adapters\UserAdapterTests.cs" />
-    <Compile Include="AssemblyTestsInitialize.cs" />
+    <Compile Include="Initializers\AssemblyTestsInitialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -67,10 +67,13 @@
       <Project>{e9b236df-5217-45bb-89fd-e065cf40929d}</Project>
       <Name>Planru.Crosscutting</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Planru.Plugins.Default\Planru.Plugins.Default.csproj">
+    <ProjectReference Include="..\Planru.Plugins.Default\Planru.Plugins.Main.csproj">
       <Project>{bf73c400-1175-458f-aad1-ee59104f14bf}</Project>
-      <Name>Planru.Plugins.Default</Name>
+      <Name>Planru.Plugins.Main</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

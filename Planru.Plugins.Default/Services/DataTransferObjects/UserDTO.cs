@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Default.Services.DataTransferObjects
+namespace Planru.Plugins.Main.Services.DataTransferObjects
 {
     public class UserDTO
     {

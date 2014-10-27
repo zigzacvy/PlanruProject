@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace Planru.Core.Persistence
 {
-    public interface IRepository<TEntity, TId> : IDisposable
-        where TEntity : Entity<TEntity, TId>
+    public interface IRepository<TEntity, TID> : IDisposable
+        where TEntity : Entity<TID>
     {
         /// <summary>
         /// Get the unit of work in this repository
@@ -56,7 +56,7 @@ namespace Planru.Core.Persistence
         /// </summary>
         /// <param name="id">Entity key value</param>
         /// <returns></returns>
-        TEntity Get(TId id);
+        TEntity Get(TID id);
 
         /// <summary>
         /// Get all elements of type TEntity in repository

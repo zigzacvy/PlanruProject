@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planru.Core.Domain
 {
-    public abstract class Entity<TEntity, TID> 
-        where TEntity : Entity<TEntity, TID>
+    public abstract class Entity<TID> 
     {
         public virtual TID Id { get; protected set; }
     }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Default.Persistence.Repositories
+namespace Planru.Plugins.Main.Persistence.Repositories
 {
     public interface ILocationRepositoty
     {

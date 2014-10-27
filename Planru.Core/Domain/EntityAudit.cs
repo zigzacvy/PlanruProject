@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planru.Core.Domain
 {
-    public abstract class EntityAudit<TEntity, TID> : Entity<TEntity, TID> 
-        where TEntity : EntityAudit<TEntity, TID>
+    public abstract class EntityAudit<TID> : Entity<TID> 
     {
         public DateTime? CreatedDateTime;
         public DateTime? UpdatedDateTime;

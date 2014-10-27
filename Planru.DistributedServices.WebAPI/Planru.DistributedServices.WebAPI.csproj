@@ -251,6 +251,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Planru.Core\Planru.Core.csproj">
+      <Project>{2f2826d4-b154-4b16-94b6-288d1efb9d05}</Project>
+      <Name>Planru.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Planru.Plugins.Default\Planru.Plugins.Main.csproj">
+      <Project>{bf73c400-1175-458f-aad1-ee59104f14bf}</Project>
+      <Name>Planru.Plugins.Main</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
