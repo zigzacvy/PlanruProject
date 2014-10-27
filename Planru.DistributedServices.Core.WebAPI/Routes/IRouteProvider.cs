@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Routing;
 
-namespace Planru.DistributedServices.Core.WebAPI.Routes
+namespace Planru.DistributedServices.WebAPI.Core.Routes
 {
     public interface IRouteProvider
     {
