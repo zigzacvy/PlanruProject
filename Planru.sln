@@ -29,6 +29,8 @@ Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Planru.Modeling", "Planru.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Plugins.Main.Tests", "Planru.Plugins.Default.Tests\Planru.Plugins.Main.Tests.csproj", "{542A22A6-2691-498D-B7D6-0F5D341C9263}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.DistributedServices.Core.WebAPI", "Planru.DistributedServices.Core.WebAPI\Planru.DistributedServices.Core.WebAPI.csproj", "{EACE8912-3274-4AC1-860C-90458F266F24}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{542A22A6-2691-498D-B7D6-0F5D341C9263}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{542A22A6-2691-498D-B7D6-0F5D341C9263}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{542A22A6-2691-498D-B7D6-0F5D341C9263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EACE8912-3274-4AC1-860C-90458F266F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EACE8912-3274-4AC1-860C-90458F266F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EACE8912-3274-4AC1-860C-90458F266F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EACE8912-3274-4AC1-860C-90458F266F24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,5 +81,6 @@ Global
 		{C4FF9D0B-2F25-40E3-868F-A94057AD90A0} = {90133825-A2EA-4E2F-A3C0-700498A4F0A7}
 		{A1AD2025-0816-4D3E-8E99-359A38467384} = {400EBC41-270D-4FA7-84D4-3BDE864B1E5C}
 		{542A22A6-2691-498D-B7D6-0F5D341C9263} = {49B55C31-6F90-47A8-857A-ADDF86A6C7E2}
+		{EACE8912-3274-4AC1-860C-90458F266F24} = {0BF8DA43-4EED-4998-BE02-39484AC9911F}
 	EndGlobalSection
 EndGlobal
