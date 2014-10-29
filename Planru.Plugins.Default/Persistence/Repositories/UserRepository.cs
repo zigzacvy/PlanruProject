@@ -11,9 +11,10 @@ namespace Planru.Plugins.Main.Persistence.Repositories
 {
     public class UserRepository : Repository<User, int>, IUserRepository
     {
-        public UserRepository(MainUnitOfWork unitOfWork)
+        public UserRepository(IQueryableUnitOfWork unitOfWork)
             : base(unitOfWork)
         { 
+
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Planru.Plugins.Main.Services.DataTransferObjects.Profiles
 {
-    public class DefaultProfile : Profile
+    public class MainProfile : Profile
     {
         protected override void Configure()
         {
