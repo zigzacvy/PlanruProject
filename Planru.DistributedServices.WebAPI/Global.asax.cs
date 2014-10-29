@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Planru.Core.WebAPI.Routes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,6 +7,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Microsoft.Practices.Unity;
+using System.Web.Http.Dispatcher;
+using Planru.DistributedServices.WebAPI.Resolvers;
 
 namespace Planru.DistributedServices.WebAPI
 {
@@ -13,6 +17,7 @@ namespace Planru.DistributedServices.WebAPI
     {
         protected void Application_Start()
         {
+            GlobalConfiguration.Configuration.Services.Replace(typeof(IAssembliesResolver), new AssembliesResolver());
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
