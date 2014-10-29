@@ -67,7 +67,7 @@
       <Project>{e9b236df-5217-45bb-89fd-e065cf40929d}</Project>
       <Name>Planru.Crosscutting</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Planru.Plugins.Default\Planru.Plugins.Main.csproj">
+    <ProjectReference Include="..\Planru.Plugins.Main\Planru.Plugins.Main.csproj">
       <Project>{bf73c400-1175-458f-aad1-ee59104f14bf}</Project>
       <Name>Planru.Plugins.Main</Name>
     </ProjectReference>

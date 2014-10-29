@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Planru.Crosscutting.Caching")]
+[assembly: AssemblyTitle("Planru.Core.WebAPI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Planru.Crosscutting.Caching")]
+[assembly: AssemblyProduct("Planru.Core.WebAPI")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cba8e500-7f46-446e-b3f1-364e6271d7d3")]
+[assembly: Guid("17934a55-4281-4421-8c60-6ee93e478715")]
 
 // Version information for an assembly consists of the following four values:
 //

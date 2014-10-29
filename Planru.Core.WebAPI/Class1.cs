@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Core.WebAPI.Routes
+namespace Planru.Core.WebAPI
 {
-    public interface IRoutePublisher
+    public class Class1
     {
     }
 }
