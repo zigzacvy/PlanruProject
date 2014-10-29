@@ -312,10 +312,6 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Planru.Core.WebAPI\Planru.Core.WebAPI.csproj">
-      <Project>{a5aaf93e-2ace-4114-879c-95eb7ed059e0}</Project>
-      <Name>Planru.Core.WebAPI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Planru.Core\Planru.Core.csproj">
       <Project>{2f2826d4-b154-4b16-94b6-288d1efb9d05}</Project>
       <Name>Planru.Core</Name>
