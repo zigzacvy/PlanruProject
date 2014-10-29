@@ -59,9 +59,9 @@
       <Project>{2f2826d4-b154-4b16-94b6-288d1efb9d05}</Project>
       <Name>Planru.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Planru.Crosscutting.NetFramework\Planru.Crosscutting.NetFramework.csproj">
+    <ProjectReference Include="..\Planru.Crosscutting.Logging\Planru.Crosscutting.Logging.csproj">
       <Project>{c4ff9d0b-2f25-40e3-868f-a94057ad90a0}</Project>
-      <Name>Planru.Crosscutting.NetFramework</Name>
+      <Name>Planru.Crosscutting.Logging</Name>
     </ProjectReference>
     <ProjectReference Include="..\Planru.Crosscutting\Planru.Crosscutting.csproj">
       <Project>{e9b236df-5217-45bb-89fd-e065cf40929d}</Project>

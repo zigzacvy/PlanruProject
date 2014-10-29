@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Planru.Plugins.Main.Persistence.Repositories;
-using Planru.Plugins.Main.Persistence.UnitOfWork;
+using Planru.Plugins.Main.Persistence;
 using Planru.Plugins.Main.Domain;
 
 namespace Planru.DistributedServices.WebAPI.Controllers
@@ -15,7 +15,7 @@ namespace Planru.DistributedServices.WebAPI.Controllers
         {
             ViewBag.Title = "Home Page";
 
-            DefaultUnitOfWork uow = new DefaultUnitOfWork();
+            MainUnitOfWork uow = new MainUnitOfWork();
             var userRepository = new UserRepository(uow);
             userRepository.Add(new User() { FirstName = "Liep", LastName = "Nguyen" });
             userRepository.UnitOfWork.Commit();

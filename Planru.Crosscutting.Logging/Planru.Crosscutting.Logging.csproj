@@ -7,8 +7,8 @@
     <ProjectGuid>{C4FF9D0B-2F25-40E3-868F-A94057AD90A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Planru.Crosscutting.NetFramework</RootNamespace>
-    <AssemblyName>Planru.Crosscutting.NetFramework</AssemblyName>
+    <RootNamespace>Planru.Crosscutting.Logging</RootNamespace>
+    <AssemblyName>Planru.Crosscutting.Logging</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

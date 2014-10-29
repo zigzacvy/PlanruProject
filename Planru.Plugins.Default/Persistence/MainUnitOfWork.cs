@@ -9,9 +9,9 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Main.Persistence.UnitOfWork
+namespace Planru.Plugins.Main.Persistence
 {
-    public class DefaultUnitOfWork : DbContext, IQueryableUnitOfWork
+    public class MainUnitOfWork : DbContext, IQueryableUnitOfWork
     {
         public DbSet<TEntity> CreateSet<TEntity>() where TEntity : class
         {
