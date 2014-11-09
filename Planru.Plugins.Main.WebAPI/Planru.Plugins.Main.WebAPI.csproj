@@ -67,6 +67,10 @@
       <Project>{9f766328-2e8a-42a6-adfb-ea1ac9b16b1d}</Project>
       <Name>Planru.Core.WebAPI</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Planru.Plugins.Main\Planru.Plugins.Main.csproj">
+      <Project>{bf73c400-1175-458f-aad1-ee59104f14bf}</Project>
+      <Name>Planru.Plugins.Main</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

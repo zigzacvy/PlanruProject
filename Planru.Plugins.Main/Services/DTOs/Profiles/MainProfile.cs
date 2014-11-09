@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Main.Services.DataTransferObjects.Profiles
+namespace Planru.Plugins.Main.Services.DTOs.Profiles
 {
     public class MainProfile : Profile
     {

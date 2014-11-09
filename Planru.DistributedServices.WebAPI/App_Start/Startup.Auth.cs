@@ -59,7 +59,9 @@ namespace Planru.DistributedServices.WebAPI
             //    appId: "",
             //    appSecret: "");
 
-            //app.UseGoogleAuthentication();
+            app.UseGoogleAuthentication(
+                clientId: "375348554986-jtjdlmpvp1f50p02mro52kuivner3c87.apps.googleusercontent.com",
+                clientSecret: "6-YRQYyrpycN6xt4huXQvHOb");
         }
     }
 }

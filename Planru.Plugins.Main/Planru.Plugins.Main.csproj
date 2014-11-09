@@ -76,11 +76,11 @@
     <Compile Include="Persistence\Repositories\IRoleRepositoty.cs" />
     <Compile Include="Persistence\Repositories\IUserRepositoty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DataTransferObjects\LocationDTO.cs" />
-    <Compile Include="Services\DataTransferObjects\PermissionDTO.cs" />
-    <Compile Include="Services\DataTransferObjects\Profiles\MainProfile.cs" />
-    <Compile Include="Services\DataTransferObjects\RoleDTO.cs" />
-    <Compile Include="Services\DataTransferObjects\UserDTO.cs" />
+    <Compile Include="Services\DTOs\LocationDTO.cs" />
+    <Compile Include="Services\DTOs\PermissionDTO.cs" />
+    <Compile Include="Services\DTOs\Profiles\MainProfile.cs" />
+    <Compile Include="Services\DTOs\RoleDTO.cs" />
+    <Compile Include="Services\DTOs\UserDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

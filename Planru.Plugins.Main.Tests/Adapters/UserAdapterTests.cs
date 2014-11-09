@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Planru.Crosscutting.Adapter;
 using Planru.Plugins.Main.Domain;
-using Planru.Plugins.Main.Services.DataTransferObjects;
+using Planru.Plugins.Main.Services.DTOs;
 using Planru.Crosscutting.NetFramework.Adapter;
 
 namespace Planru.Plugins.Main.Tests.Adapter

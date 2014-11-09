@@ -10,7 +10,6 @@ namespace Planru.DistributedServices.WebAPI.Resolvers
 {
     public class AssembliesResolver : IAssembliesResolver
     {
-
         public ICollection<Assembly> GetAssemblies()
         {
             var appPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -19,6 +18,6 @@ namespace Planru.DistributedServices.WebAPI.Resolvers
             var pluginAssemblies = files.Select(Assembly.LoadFile).ToList();
             assemblies.AddRange(pluginAssemblies);
             return assemblies;
-        }
+        } 
     }
 }

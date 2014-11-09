@@ -5,6 +5,7 @@ using Planru.Plugins.Main.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,8 +17,7 @@ namespace Planru.Plugins.Main.Tests.Initializers
         [AssemblyInitialize]
         public static void InitializeFactories(TestContext context)
         {
-            User user = new User();
-
+            Assembly.Load("Planru.Plugins.Main");
             ITypeAdapterFactory adapterfactory = new AutomapperTypeAdapterFactory();
             TypeAdapterFactory.SetCurrent(adapterfactory);
         }
