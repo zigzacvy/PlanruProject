@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
-using Planru.Core.WebAPI.Routes;
+using Planru.Plugins.Main.Persistence.Repositories;
 
 namespace Planru.DistributedServices.WebAPI
 {
@@ -38,8 +38,7 @@ namespace Planru.DistributedServices.WebAPI
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
-
-            container.RegisterType<IRoutePublisher, RoutePublisher>();
+            container.RegisterType<IUserRepository, UserRepository>();
         }
     }
 }

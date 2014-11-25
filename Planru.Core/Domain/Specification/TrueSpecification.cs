@@ -16,7 +16,6 @@ namespace Planru.Core.Domain.Specification
         public override Expression<Func<TEntity, bool>> SatisfiedBy()
         {
             //Create "result variable" transform adhoc execution plan in prepared plan
-            //for more info: http://geeks.ms/blogs/unai/2010/07/91/ef-4-0-performance-tips-1.aspx
             bool result = true;
 
             Expression<Func<TEntity, bool>> trueExpression = t => result;

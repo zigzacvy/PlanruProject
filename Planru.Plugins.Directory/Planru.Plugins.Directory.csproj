@@ -4,13 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F2826D4-B154-4B16-94B6-288D1EFB9D05}</ProjectGuid>
+    <ProjectGuid>{BF73C400-1175-458F-AAD1-EE59104F14BF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Planru.Core</RootNamespace>
-    <AssemblyName>Planru.Core</AssemblyName>
+    <RootNamespace>Planru.Plugins.Directory</RootNamespace>
+    <AssemblyName>Planru.Plugins.Directory</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,13 +31,17 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MongoDB.Bson">
       <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
@@ -52,45 +59,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persistence\IRepository.cs" />
-    <Compile Include="Persistence\IUnitOfWork.cs" />
-    <Compile Include="Domain\Entity.cs" />
-    <Compile Include="Domain\EntityAudit.cs" />
-    <Compile Include="Domain\ValueObject.cs" />
-    <Compile Include="Persistence\MongoDB\IMongoRepository.cs" />
-    <Compile Include="Persistence\MongoDB\MongoEntity.cs" />
-    <Compile Include="Persistence\MongoDB\MongoRepository.cs" />
-    <Compile Include="Persistence\MongoDB\MongoUnitOfWork.cs" />
+    <Compile Include="Domain\Location.cs" />
+    <Compile Include="Domain\Permission.cs" />
+    <Compile Include="Domain\Role.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Persistence\Repositories\UserRepository.cs" />
+    <Compile Include="Persistence\Repositories\ILocationRepositoty.cs" />
+    <Compile Include="Persistence\Repositories\IPermissionRepositoty.cs" />
+    <Compile Include="Persistence\Repositories\IRoleRepositoty.cs" />
+    <Compile Include="Persistence\Repositories\IUserRepositoty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Domain\Specification\AndSpecification.cs" />
-    <Compile Include="Domain\Specification\CompositeSpecification.cs" />
-    <Compile Include="Domain\Specification\DirectSpecification.cs" />
-    <Compile Include="Domain\Specification\ExpressionBuilder.cs" />
-    <Compile Include="Domain\Specification\ISpecification.cs" />
-    <Compile Include="Domain\Specification\NotSpecification.cs" />
-    <Compile Include="Domain\Specification\OrSpecification.cs" />
-    <Compile Include="Domain\Specification\ParametersRebinder.cs" />
-    <Compile Include="Domain\Specification\Specification.cs" />
-    <Compile Include="Domain\Specification\TrueSpecification.cs" />
-    <Compile Include="Services\DataTransferObject.cs" />
+    <Compile Include="Services\DTOs\LocationDTO.cs" />
+    <Compile Include="Services\DTOs\PermissionDTO.cs" />
+    <Compile Include="Services\DTOs\Mappings\Profile.cs" />
+    <Compile Include="Services\DTOs\RoleDTO.cs" />
+    <Compile Include="Services\DTOs\UserDTO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Planru.CrossCutting.IoC\Planru.Crosscutting.IoC.csproj">
-      <Project>{2044441e-908a-4a87-8c1c-55f241d09980}</Project>
-      <Name>Planru.Crosscutting.IoC</Name>
+    <ProjectReference Include="..\Planru.Core\Planru.Core.csproj">
+      <Project>{2f2826d4-b154-4b16-94b6-288d1efb9d05}</Project>
+      <Name>Planru.Core</Name>
+      <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\Planru.Crosscutting.Logging\Planru.Crosscutting.Logging.csproj">
-      <Project>{212b9252-b4ad-40cd-a893-25dac6305fb2}</Project>
-      <Name>Planru.Crosscutting.Logging</Name>
+    <ProjectReference Include="..\Planru.Crosscutting.Adapter\Planru.Crosscutting.Adapter.csproj">
+      <Project>{c4ff9d0b-2f25-40e3-868f-a94057ad90a0}</Project>
+      <Name>Planru.Crosscutting.Adapter</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Persistence\EntityFramework\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

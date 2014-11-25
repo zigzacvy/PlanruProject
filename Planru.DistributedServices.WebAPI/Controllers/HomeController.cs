@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Planru.Plugins.Main.Persistence.Repositories;
 using Planru.Plugins.Main.Persistence;
 using Planru.Plugins.Main.Domain;
-using Planru.Core.WebAPI.Routes;
 using Microsoft.Practices.Unity;
 using System.Web.Routing;
+using System.Data.Entity;
 
 namespace Planru.DistributedServices.WebAPI.Controllers
 {
@@ -22,6 +22,7 @@ namespace Planru.DistributedServices.WebAPI.Controllers
             //var userRepository = new UserRepository(uow);
             //userRepository.Add(new User() { FirstName = "Liep", LastName = "Nguyen" });
             //userRepository.UnitOfWork.Commit();
+
 
             return View();
         }

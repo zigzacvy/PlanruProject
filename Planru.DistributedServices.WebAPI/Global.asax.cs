@@ -1,5 +1,4 @@
-﻿using Planru.Core.WebAPI.Routes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Microsoft.Practices.Unity;
 using System.Web.Http.Dispatcher;
-using Planru.DistributedServices.WebAPI.Resolvers;
+using Planru.Core.WebAPI.Resolvers;
 
 namespace Planru.DistributedServices.WebAPI
 {

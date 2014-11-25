@@ -24,6 +24,12 @@ namespace Planru.Core.Persistence
         void Add(TEntity item);
 
         /// <summary>
+        /// Add items into repository
+        /// </summary>
+        /// <param name="items"></param>
+        void Add(IEnumerable<TEntity> items);
+
+        /// <summary>
         /// Delete item 
         /// </summary>
         /// <param name="item">Item to delete</param>
@@ -36,8 +42,8 @@ namespace Planru.Core.Persistence
         void Modify(TEntity item);
 
         /// <summary>
-        ///Track entity into this repository, really in UnitOfWork. 
-        ///In EF this can be done with Attach and with Update in NH
+        /// Track entity into this repository, really in UnitOfWork. 
+        /// In EF this can be done with Attach and with Update in NH
         /// </summary>
         /// <param name="item">Item to attach</param>
         void TrackItem(TEntity item);
@@ -62,7 +68,7 @@ namespace Planru.Core.Persistence
         /// Get all elements of type TEntity in repository
         /// </summary>
         /// <returns>List of selected elements</returns>
-        IEnumerable<TEntity> GetAll();
+        IQueryable<TEntity> GetAll();
 
         /// <summary>
         /// Get all elements of type TEntity that matching a
@@ -70,7 +76,7 @@ namespace Planru.Core.Persistence
         /// </summary>
         /// <param name="specification">Specification that result meet</param>
         /// <returns></returns>
-        IEnumerable<TEntity> AllMatching(ISpecification<TEntity> specification);
+        IQueryable<TEntity> AllMatching(ISpecification<TEntity> specification);
 
         /// <summary>
         /// Get all elements of type TEntity in repository
@@ -80,13 +86,13 @@ namespace Planru.Core.Persistence
         /// <param name="orderByExpression">Order by expression for this query</param>
         /// <param name="ascending">Specify if order is ascending</param>
         /// <returns>List of selected elements</returns>
-        IEnumerable<TEntity> GetPaged<KProperty>(int pageIndex, int pageCount, Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending);
+        IQueryable<TEntity> GetPaged<KProperty>(int pageIndex, int pageCount, Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending);
 
         /// <summary>
         /// Get  elements of type TEntity in repository
         /// </summary>
         /// <param name="filter">Filter that each element do match</param>
         /// <returns>List of selected elements</returns>
-        IEnumerable<TEntity> GetFiltered(Expression<Func<TEntity, bool>> filter);
+        IQueryable<TEntity> GetFiltered(Expression<Func<TEntity, bool>> filter);
     }
 }
