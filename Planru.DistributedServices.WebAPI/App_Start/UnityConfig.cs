@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
-using Planru.Plugins.Main.Persistence.Repositories;
+using Planru.Plugins.Directory.Persistence.Repositories;
 
 namespace Planru.DistributedServices.WebAPI
 {

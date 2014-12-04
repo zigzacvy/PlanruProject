@@ -12,7 +12,7 @@ namespace Planru.Core.Domain.Specification
     /// </summary>
     /// <typeparam name="TEntity">Type of entity</typeparam>
     public interface ISpecification<TEntity>
-        where TEntity : class
+        //where TEntity : class
     {
         /// <summary>
         /// Check if this specification is satisfied by a 

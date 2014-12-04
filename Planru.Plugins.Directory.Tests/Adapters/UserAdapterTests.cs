@@ -1,10 +1,10 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Planru.Crosscutting.Adapter;
-using Planru.Plugins.Main.Domain;
-using Planru.Plugins.Main.Services.DTOs;
+using Planru.Plugins.Directory.Domain;
+using Planru.Plugins.Directory.Services.DTOs;
 
-namespace Planru.Plugins.Main.Tests.Adapter
+namespace Planru.Plugins.Directory.Tests.Adapter
 {
     [TestClass]
     public class UserAdapterTests

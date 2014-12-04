@@ -10,8 +10,8 @@ namespace Planru.Core.Services
     /// Data transfer object
     /// </summary>
     /// <typeparam name="TId">The type of data key</typeparam>
-    public class DataTransferObject<TId>
+    public class DataTransferObject<TID>
     {
-        public TId Id { get; set; }
+        public virtual TID Id { get; set; }
     }
 }

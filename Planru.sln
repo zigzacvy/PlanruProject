@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{49B55C31
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modeling and Design", "Modeling and Design", "{400EBC41-270D-4FA7-84D4-3BDE864B1E5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Plugins.Main.Tests", "Planru.Plugins.Directory.Tests\Planru.Plugins.Main.Tests.csproj", "{542A22A6-2691-498D-B7D6-0F5D341C9263}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Plugins.Directory.Tests", "Planru.Plugins.Directory.Tests\Planru.Plugins.Directory.Tests.csproj", "{542A22A6-2691-498D-B7D6-0F5D341C9263}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Directory", "Directory", "{90151720-7AE7-4BAE-AE8D-ECBE10B0FC57}"
 EndProject

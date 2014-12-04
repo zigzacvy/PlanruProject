@@ -1,7 +1,7 @@
 ﻿using Planru.Core.Persistence;
-using Planru.Plugins.Main.Domain;
-using Planru.Plugins.Main.Persistence;
-using Planru.Plugins.Main.Persistence.Repositories;
+using Planru.Plugins.Directory.Domain;
+using Planru.Plugins.Directory.Persistence;
+using Planru.Plugins.Directory.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace Planru.Plugins.Main.WebAPI.Controllers
+namespace Planru.Plugins.Directory.WebAPI.Controllers
 {
     public class UserController : ApiController
     {

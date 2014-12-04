@@ -10,8 +10,7 @@ namespace Planru.Core.Persistence
     /// <summary>
     /// 
     /// </summary>
-    public interface IUnitOfWork
-        : IDisposable
+    public interface IUnitOfWork : IDisposable 
     {
         /// <summary>
         /// Commit all changes made in a container.
@@ -36,6 +35,5 @@ namespace Planru.Core.Persistence
         /// Rollback tracked changes. See references of UnitOfWork pattern
         /// </summary>
         void RollbackChanges();
-
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Main.Domain
+namespace Planru.Core.Domain
 {
-    public class Permission
+    public interface IEntity<TID> 
     {
+        TID Id { get; set; }
     }
 }

@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-
+using System;
 namespace Planru.Crosscutting.Adapter.Automapper
 {
     /// <summary>
     /// Automapper type adapter implementation
     /// </summary>
     public class AutomapperTypeAdapter
-        :ITypeAdapter
+        : ITypeAdapter
     {
         #region ITypeAdapter Members
 
@@ -23,5 +23,11 @@ namespace Planru.Crosscutting.Adapter.Automapper
         }
 
         #endregion
+
+
+        public object Adapt(object source, Type sourceType, Type targetType)
+        {
+            return Mapper.Map(source, sourceType, targetType);
+        }
     }
 }

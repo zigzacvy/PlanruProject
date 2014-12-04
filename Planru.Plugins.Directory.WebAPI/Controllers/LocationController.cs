@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Main.WebAPI.Controllers
+namespace Planru.Plugins.Directory.WebAPI.Controllers
 {
     public class LocationController
     {

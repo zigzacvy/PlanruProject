@@ -1,16 +1,17 @@
-﻿using Planru.Core.Domain;
+﻿using MongoDB.Bson;
+using Planru.Core.Domain;
 using Planru.Core.Persistence;
 using Planru.Core.Persistence.MongoDB;
-using Planru.Plugins.Main.Domain;
+using Planru.Plugins.Directory.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Main.Persistence.Repositories
+namespace Planru.Plugins.Directory.Persistence.Repositories
 {
-    public interface IUserRepository : IMongoRepository
+    public interface IUserRepository : IRepository<IUser, Guid>
     {
 
     }

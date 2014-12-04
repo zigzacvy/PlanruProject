@@ -10,13 +10,7 @@ using System.Threading.Tasks;
 namespace Planru.Core.Persistence
 {
     public interface IRepository<TEntity, TID> : IDisposable
-        where TEntity : Entity<TID>
     {
-        /// <summary>
-        /// Get the unit of work in this repository
-        /// </summary>
-        IUnitOfWork UnitOfWork { get; }
-
         /// <summary>
         /// Add item into repository
         /// </summary>
@@ -35,11 +29,15 @@ namespace Planru.Core.Persistence
         /// <param name="item">Item to delete</param>
         void Remove(TEntity item);
 
+        void Remove(TID id);
+
         /// <summary>
         /// Set item as modified
         /// </summary>
         /// <param name="item">Item to modify</param>
         void Modify(TEntity item);
+
+        void Modify(IEnumerable<TEntity> items);
 
         /// <summary>
         /// Track entity into this repository, really in UnitOfWork. 
@@ -47,15 +45,6 @@ namespace Planru.Core.Persistence
         /// </summary>
         /// <param name="item">Item to attach</param>
         void TrackItem(TEntity item);
-
-        /// <summary>
-        /// Sets modified entity into the repository. 
-        /// When calling Commit() method in UnitOfWork 
-        /// these changes will be saved into the storage
-        /// </summary>
-        /// <param name="persisted">The persisted item</param>
-        /// <param name="current">The current item</param>
-        void Merge(TEntity persisted, TEntity current);
 
         /// <summary>
         /// Get element by entity key
@@ -82,7 +71,7 @@ namespace Planru.Core.Persistence
         /// Get all elements of type TEntity in repository
         /// </summary>
         /// <param name="pageIndex">Page index</param>
-        /// <param name="pageCount">Number of elements in each page</param>
+        /// <param name="pageSize">Number of elements in each page</param>
         /// <param name="orderByExpression">Order by expression for this query</param>
         /// <param name="ascending">Specify if order is ascending</param>
         /// <returns>List of selected elements</returns>

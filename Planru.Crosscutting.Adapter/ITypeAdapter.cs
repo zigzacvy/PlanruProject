@@ -1,4 +1,5 @@
-﻿namespace Planru.Crosscutting.Adapter
+﻿using System;
+namespace Planru.Crosscutting.Adapter
 {
     /// <summary>
     /// Base contract for map dto to aggregate or aggregate to dto.
@@ -17,7 +18,7 @@
         /// <param name="source">Instance to adapt</param>
         /// <returns><paramref name="source"/> mapped to <typeparamref name="TTarget"/></returns>
         TTarget Adapt<TSource, TTarget>(TSource source)
-            where TTarget : class,new()
+            where TTarget : class, new()
             where TSource : class;
 
 
@@ -28,6 +29,8 @@
         /// <param name="source">Instance to adapt</param>
         /// <returns><paramref name="source"/> mapped to <typeparamref name="TTarget"/></returns>
         TTarget Adapt<TTarget>(object source)
-            where TTarget : class,new();
+            where TTarget : class, new();
+
+        object Adapt(object source, Type TSource, Type TTarget);
     }
 }
