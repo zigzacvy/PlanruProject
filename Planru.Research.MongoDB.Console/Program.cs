@@ -14,7 +14,8 @@ using Planru.Crosscutting.IoC;
 using Planru.Crosscutting.IoC.Unity;
 using Planru.Plugins.Directory.Services;
 using Planru.Plugins.Directory.Persistence.MongoDB.Repositories;
-using Planru.Plugins.Directory.Persistence.MongoDB.Domain;
+using MongoDB.Bson.Serialization;
+using Planru.Core.Domain;
 
 namespace Planru.Research.MongoDB.Console
 {
@@ -51,26 +52,25 @@ namespace Planru.Research.MongoDB.Console
             // Create new User repository
             //IUserRepository userRepository = new UserRepository("users");
 
-            
-
             //userCollection.Save(user);
 
             IContainer container = new UnityContainer();
             container.RegisterInstance<MongoDatabase>(database);
             container.Register<IUserRepository, UserRepository>();
 
-            
-
             //var userSvc = container.Resolve<IUserService>();
+
+            
 
             var userRepos = container.Resolve<IUserRepository>();
 
-            var e = userRepos.Get(new Guid("481ac111-a0ae-0848-8e11-bf06cb0cf66c"));
+            //var e = userRepos.Get(new Guid("e788e49e-58ab-43f4-98cd-be8d02f26c3a"));
 
+            var users = userRepos.GetAll();
+
+            userRepos.Add(new User() { FirstName = "Mien", LastName = "Tran" });
 
             //var db = container.Resolve<MongoDatabase>();
-
-            
 
             System.Console.ReadKey();
         }

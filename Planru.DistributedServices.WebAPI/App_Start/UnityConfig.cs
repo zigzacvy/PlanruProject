@@ -38,7 +38,6 @@ namespace Planru.DistributedServices.WebAPI
 
             // TODO: Register your types here
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IUserRepository, UserRepository>();
         }
     }
 }

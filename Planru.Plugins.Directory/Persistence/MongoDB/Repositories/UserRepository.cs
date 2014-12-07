@@ -1,6 +1,6 @@
-﻿using Planru.Core.Persistence.MongoDB;
+﻿using MongoDB.Driver;
+using Planru.Core.Persistence.MongoDB;
 using Planru.Plugins.Directory.Domain;
-using Planru.Plugins.Directory.Persistence.MongoDB.Domain;
 using Planru.Plugins.Directory.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
@@ -10,10 +10,12 @@ using System.Threading.Tasks;
 
 namespace Planru.Plugins.Directory.Persistence.MongoDB.Repositories
 {
-    public class UserRepository : Repository<IUser, Guid>, IUserRepository
+    public class UserRepository : Repository<User, Guid>, IUserRepository
     {
-        public UserRepository()
+        public UserRepository(MongoDatabase database)
+            : base(database)
         {
+
         }
     }
 }

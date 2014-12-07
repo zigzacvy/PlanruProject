@@ -9,8 +9,9 @@ using MongoDB.Bson;
 
 namespace Planru.Plugins.Directory.Domain
 {
-    public interface IUser : IEntity<Guid>
+    public class User : EntityAudit<Guid>
     {
-
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }

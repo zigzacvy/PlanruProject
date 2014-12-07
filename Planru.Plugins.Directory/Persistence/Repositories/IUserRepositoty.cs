@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Planru.Plugins.Directory.Persistence.Repositories
 {
-    public interface IUserRepository : IRepository<IUser, Guid>
+    public interface IUserRepository : IRepository<User, Guid>
     {
 
     }

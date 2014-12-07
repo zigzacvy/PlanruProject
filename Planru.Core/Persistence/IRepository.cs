@@ -29,6 +29,10 @@ namespace Planru.Core.Persistence
         /// <param name="item">Item to delete</param>
         void Remove(TEntity item);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
         void Remove(TID id);
 
         /// <summary>
@@ -37,6 +41,10 @@ namespace Planru.Core.Persistence
         /// <param name="item">Item to modify</param>
         void Modify(TEntity item);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="items"></param>
         void Modify(IEnumerable<TEntity> items);
 
         /// <summary>
@@ -57,7 +65,7 @@ namespace Planru.Core.Persistence
         /// Get all elements of type TEntity in repository
         /// </summary>
         /// <returns>List of selected elements</returns>
-        IQueryable<TEntity> GetAll();
+        IEnumerable<TEntity> GetAll();
 
         /// <summary>
         /// Get all elements of type TEntity that matching a
@@ -65,7 +73,7 @@ namespace Planru.Core.Persistence
         /// </summary>
         /// <param name="specification">Specification that result meet</param>
         /// <returns></returns>
-        IQueryable<TEntity> AllMatching(ISpecification<TEntity> specification);
+        IEnumerable<TEntity> AllMatching(ISpecification<TEntity> specification);
 
         /// <summary>
         /// Get all elements of type TEntity in repository
@@ -75,13 +83,13 @@ namespace Planru.Core.Persistence
         /// <param name="orderByExpression">Order by expression for this query</param>
         /// <param name="ascending">Specify if order is ascending</param>
         /// <returns>List of selected elements</returns>
-        IQueryable<TEntity> GetPaged<KProperty>(int pageIndex, int pageCount, Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending);
+        IEnumerable<TEntity> GetPaged<KProperty>(int pageIndex, int pageCount, Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending);
 
         /// <summary>
         /// Get  elements of type TEntity in repository
         /// </summary>
         /// <param name="filter">Filter that each element do match</param>
         /// <returns>List of selected elements</returns>
-        IQueryable<TEntity> GetFiltered(Expression<Func<TEntity, bool>> filter);
+        IEnumerable<TEntity> GetFiltered(Expression<Func<TEntity, bool>> filter);
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Directory.Services.DTOs
+namespace Planru.Core
 {
-    public class PermissionDTO
+    public abstract class Bootstrapper
     {
+        protected virtual void Configure() { }
     }
 }

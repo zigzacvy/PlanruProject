@@ -17,7 +17,7 @@ namespace Planru.Plugins.Directory.Tests.Initializers
         [AssemblyInitialize]
         public static void InitializeFactories(TestContext context)
         {
-            Assembly.Load("Planru.Plugins.Main");
+            Assembly.Load("Planru.Plugins.Directory");
             ITypeAdapterFactory adapterfactory = new AutomapperTypeAdapterFactory();
             TypeAdapterFactory.SetCurrent(adapterfactory);
         }

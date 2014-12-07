@@ -53,11 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Persistence\EntityFramework\Repository.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="CoreConfigurerAdapter.cs" />
     <Compile Include="Persistence\IRepository.cs" />
     <Compile Include="Persistence\IUnitOfWork.cs" />
-    <Compile Include="Domain\IEntity.cs" />
-    <Compile Include="Domain\IEntityAudit.cs" />
+    <Compile Include="Domain\Entity.cs" />
+    <Compile Include="Domain\EntityAudit.cs" />
     <Compile Include="Domain\ValueObject.cs" />
     <Compile Include="Persistence\MongoDB\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Domain\Specification\TrueSpecification.cs" />
     <Compile Include="Services\DataTransferObject.cs" />
     <Compile Include="Services\IService.cs" />
+    <Compile Include="Services\Service.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -92,7 +94,9 @@
       <Name>Planru.Crosscutting.Logging</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Persistence\EntityFramework\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

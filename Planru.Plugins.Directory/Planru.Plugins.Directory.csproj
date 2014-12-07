@@ -59,23 +59,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\IUser.cs" />
-    <Compile Include="Persistence\MongoDB\Domain\User.cs" />
+    <Compile Include="Domain\User.cs" />
     <Compile Include="Persistence\MongoDB\Repositories\UserRepository.cs" />
     <Compile Include="Persistence\Repositories\IUserRepositoty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DTOs\LocationDTO.cs" />
-    <Compile Include="Services\DTOs\PermissionDTO.cs" />
-    <Compile Include="Services\DTOs\Mappings\Profile.cs" />
-    <Compile Include="Services\DTOs\RoleDTO.cs" />
+    <Compile Include="Mappings.cs" />
     <Compile Include="Services\DTOs\UserDTO.cs" />
     <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Planru.Core.Plugin\Planru.Core.Plugin.csproj">
+      <Project>{da3fadff-955b-4d20-94d0-9cb1fe32def6}</Project>
+      <Name>Planru.Core.Plugin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Planru.Core\Planru.Core.csproj">
       <Project>{2f2826d4-b154-4b16-94b6-288d1efb9d05}</Project>
       <Name>Planru.Core</Name>

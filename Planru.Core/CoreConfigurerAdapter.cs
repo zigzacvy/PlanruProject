@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Core.Domain
+namespace Planru.Core
 {
-    public interface IEntity<TID> 
+    public class CoreConfigurerAdapter
     {
-        TID Id { get; set; }
     }
 }

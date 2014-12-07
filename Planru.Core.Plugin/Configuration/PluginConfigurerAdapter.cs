@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Directory.Services.DTOs
+namespace Planru.Core.Plugin.Configuration
 {
-    public class RoleDTO
+    public abstract class PluginConfigurerAdapter
     {
     }
 }
