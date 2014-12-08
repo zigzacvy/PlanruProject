@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 namespace Planru.Crosscutting.Adapter
 {
     /// <summary>
@@ -32,5 +33,7 @@ namespace Planru.Crosscutting.Adapter
             where TTarget : class, new();
 
         object Adapt(object source, Type TSource, Type TTarget);
+
+        IMappingExpression CreateMap<TSource, TTarget>();
     }
 }

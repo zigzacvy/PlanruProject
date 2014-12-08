@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Core
+namespace Planru.Core.Plugin.Configuration
 {
-    public class CoreConfigurerAdapter
+    public abstract class PluginConfigurer
     {
+        public abstract void Configure();
     }
 }

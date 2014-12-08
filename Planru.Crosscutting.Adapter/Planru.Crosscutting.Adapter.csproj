@@ -48,6 +48,7 @@
     <Compile Include="Automapper\AutomapperTypeAdapter.cs" />
     <Compile Include="Automapper\AutomapperTypeAdapterFactory.cs" />
     <Compile Include="AdapterProfile.cs" />
+    <Compile Include="IMappingExpression.cs" />
     <Compile Include="Mapping.cs" />
     <Compile Include="ITypeAdapter.cs" />
     <Compile Include="ITypeAdapterFactory.cs" />

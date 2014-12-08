@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Planru.Core
 {
-    public abstract class Bootstrapper
+    public class CoreConfigurer
     {
-        protected virtual void Configure() { }
     }
 }

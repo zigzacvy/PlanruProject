@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Core.Plugin.Configuration
+namespace Planru.Crosscutting.Adapter
 {
-    public abstract class PluginConfigurerAdapter
+    interface IMappingExpression
     {
+        IMappingExpression ForMember();
     }
 }

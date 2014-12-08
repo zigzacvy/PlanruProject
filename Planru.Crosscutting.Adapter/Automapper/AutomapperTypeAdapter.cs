@@ -24,10 +24,14 @@ namespace Planru.Crosscutting.Adapter.Automapper
 
         #endregion
 
-
         public object Adapt(object source, Type sourceType, Type targetType)
         {
             return Mapper.Map(source, sourceType, targetType);
+        }
+
+        public IMappingExpression CreateMap<TSource, TTarget>()
+        {
+            throw new NotImplementedException();
         }
     }
 }
