@@ -16,26 +16,51 @@ using Planru.Plugins.Directory.Services;
 using Planru.Plugins.Directory.Persistence.MongoDB.Repositories;
 using MongoDB.Bson.Serialization;
 using Planru.Core.Domain;
+using System.Linq.Expressions;
+using AutoMapper;
+using Planru.Plugins.Directory.Services.DTOs;
 
 namespace Planru.Research.MongoDB.Console
 {
-    class Program
+    public interface IMemberConfiguration<T>
     {
+        void MapForm(Expression<Func<T, object>> memberOptions);
+    }
+
+    
+
+
+    public class Program
+    {
+        public static void ForMember<TSource, TDestination>(Expression<Func<TDestination, object>> destinationMember, Action<IMemberConfiguration<TSource>> memberOptions)
+        {
+            memberOptions.Method.GetParameters();
+        }
+
         static void Main(string[] args)
         {
-            var credential = MongoCredential.CreateMongoCRCredential("planru_system", "liepnguyen", "@dmin348");
 
-            var settings = new MongoClientSettings
-            {
-                Credentials = new[] { credential },
-                Server = new MongoServerAddress("ds055680.mongolab.com", 55680)
-            };
+            //ForMember<int, int>(d => d.GetType(), m => m.MapForm(s => s.GetType()));
 
-            var client = new MongoClient(settings);
-            var server = client.GetServer();
-            var database = server.GetDatabase("planru_system");
+            Mapper.CreateMap<User, UserDTO>().ForMember(d => d.FirstName, m => m.MapFrom(s => s.LastName));
+            Mapper.CreateMap<User, UserDTO>().ForMember(d => d.LastName, m => m.MapFrom(s => s.FirstName));
 
-            var userCollection = database.GetCollection<User>("Users");
+            User user = new User() { FirstName = "Liep", LastName = "Nguyen" };
+            var userDto = Mapper.Map<UserDTO>(user);
+
+            //var credential = MongoCredential.CreateMongoCRCredential("planru_system", "liepnguyen", "@dmin348");
+
+            //var settings = new MongoClientSettings
+            //{
+            //    Credentials = new[] { credential },
+            //    Server = new MongoServerAddress("ds055680.mongolab.com", 55680)
+            //};
+
+            //var client = new MongoClient(settings);
+            //var server = client.GetServer();
+            //var database = server.GetDatabase("planru_system");
+
+            //var userCollection = database.GetCollection<User>("Users");
 
             //var users = new List<User>();
             //for (int i = 0; i < 20000; i++)
@@ -54,21 +79,21 @@ namespace Planru.Research.MongoDB.Console
 
             //userCollection.Save(user);
 
-            IContainer container = new UnityContainer();
-            container.RegisterInstance<MongoDatabase>(database);
-            container.Register<IUserRepository, UserRepository>();
+            //IContainer container = new UnityContainer();
+            //container.RegisterInstance<MongoDatabase>(database);
+            //container.Register<IUserRepository, UserRepository>();
 
             //var userSvc = container.Resolve<IUserService>();
 
             
 
-            var userRepos = container.Resolve<IUserRepository>();
+            //var userRepos = container.Resolve<IUserRepository>();
 
             //var e = userRepos.Get(new Guid("e788e49e-58ab-43f4-98cd-be8d02f26c3a"));
 
-            var users = userRepos.GetAll();
+            //var users = userRepos.GetAll();
 
-            userRepos.Add(new User() { FirstName = "Mien", LastName = "Tran" });
+            //userRepos.Add(new User() { FirstName = "Mien", LastName = "Tran" });
 
             //var db = container.Resolve<MongoDatabase>();
 

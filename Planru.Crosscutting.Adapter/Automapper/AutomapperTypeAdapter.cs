@@ -31,7 +31,8 @@ namespace Planru.Crosscutting.Adapter.Automapper
 
         public IMappingExpression CreateMap<TSource, TTarget>()
         {
-            throw new NotImplementedException();
+            Mapper.CreateMap<TSource, TTarget>().ForMember(s => s.GetType(), m => m.MapFrom(d => d.GetType()));
+            return null;
         }
     }
 }

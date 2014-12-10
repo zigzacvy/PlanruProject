@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Planru.Core
 {
-    public class CoreConfigurer
+    public interface ICoreConfigurer
     {
+
     }
 }

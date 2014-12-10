@@ -39,8 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\PluginConfigurer.cs" />
+    <Compile Include="Configuration\IPluginConfigurer.cs" />
+    <Compile Include="Configuration\PluginConfigurerAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Planru.Crosscutting.Adapter\Planru.Crosscutting.Adapter.csproj">
+      <Project>{c4ff9d0b-2f25-40e3-868f-a94057ad90a0}</Project>
+      <Name>Planru.Crosscutting.Adapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Planru.CrossCutting.IoC\Planru.Crosscutting.IoC.csproj">
+      <Project>{2044441e-908a-4a87-8c1c-55f241d09980}</Project>
+      <Name>Planru.Crosscutting.IoC</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
