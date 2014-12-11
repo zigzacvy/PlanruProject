@@ -9,6 +9,7 @@ namespace Planru.Crosscutting.Adapter
 {
     public interface IMemberConfiguration<TSource>
     {
-        void MapFrom(Expression<Func<TSource, object>> source);
+        void MapFrom(Expression<Func<TSource, object>> sourceMember);
+        Expression<Func<TSource, object>> SourceMember { get; }
     }
 }

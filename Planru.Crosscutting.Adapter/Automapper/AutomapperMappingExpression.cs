@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -16,9 +17,13 @@ namespace Planru.Crosscutting.Adapter.Automapper
             return memberConfiguration;
         });
 
-        public IMappingExpression<TSource, TTarget> ForMember(Expression<Func<TTarget, object>> destinationMember, Action<IMemberConfiguration<TSource>> memberOptions)
+        public IMappingExpression<TSource, TTarget> ForMember(Expression<Func<TTarget, object>> destinationMember, 
+            Action<IMemberConfiguration<TSource>> memberOptions)
         {
             memberOptions(_memberConfiguration.Value);
+            Mapper.CreateMap<TSource, TTarget>()
+                .ForMember(destinationMember, m => m.MapFrom(_memberConfiguration.Value.SourceMember));
+
             return this;
         }
     }

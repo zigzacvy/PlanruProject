@@ -46,13 +46,15 @@ namespace Planru.Research.MongoDB.Console
             //Mapper.CreateMap<User, UserDTO>().ForMember(d => d.FirstName, m => m.MapFrom(s => s.LastName));
             //Mapper.CreateMap<User, UserDTO>().ForMember(d => d.LastName, m => m.MapFrom(s => s.FirstName));
 
-            //User user = new User() { FirstName = "Liep", LastName = "Nguyen" };
-            //var userDto = Mapper.Map<UserDTO>(user);
-
             AutomapperTypeAdapter a = new AutomapperTypeAdapter();
             a.CreateMap<User, UserDTO>()
-                .ForMember(d => d.FirstName, m => m.MapFrom(s => s.FirstName))
-                .ForMember(d => d.LastName, m => m.MapFrom(s => s.LastName));
+                .ForMember(d => d.FirstName, m => m.MapFrom(s => s.LastName))
+                .ForMember(d => d.LastName, m => m.MapFrom(s => s.FirstName));
+
+            User user = new User() { FirstName = "Liep", LastName = "Nguyen" };
+            var userDto = a.Adapt<UserDTO>(user);
+
+           
 
             //var credential = MongoCredential.CreateMongoCRCredential("planru_system", "liepnguyen", "@dmin348");
 
