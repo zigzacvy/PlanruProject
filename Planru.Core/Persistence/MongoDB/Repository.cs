@@ -82,6 +82,7 @@ namespace Planru.Core.Persistence.MongoDB
                 result = _collection.AsQueryable().OrderBy(orderByExpression);
             else
                 result = _collection.AsQueryable().OrderByDescending(orderByExpression);
+
             return result.Skip(pageIndex * pageCount).Take(pageCount);
         }
 
