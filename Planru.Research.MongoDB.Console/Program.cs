@@ -19,6 +19,7 @@ using Planru.Core.Domain;
 using System.Linq.Expressions;
 using AutoMapper;
 using Planru.Plugins.Directory.Services.DTOs;
+using Planru.Crosscutting.Adapter.Automapper;
 
 namespace Planru.Research.MongoDB.Console
 {
@@ -34,7 +35,7 @@ namespace Planru.Research.MongoDB.Console
     {
         public static void ForMember<TSource, TDestination>(Expression<Func<TDestination, object>> destinationMember, Action<IMemberConfiguration<TSource>> memberOptions)
         {
-            memberOptions.Method.GetParameters();
+
         }
 
         static void Main(string[] args)
@@ -42,11 +43,16 @@ namespace Planru.Research.MongoDB.Console
 
             //ForMember<int, int>(d => d.GetType(), m => m.MapForm(s => s.GetType()));
 
-            Mapper.CreateMap<User, UserDTO>().ForMember(d => d.FirstName, m => m.MapFrom(s => s.LastName));
-            Mapper.CreateMap<User, UserDTO>().ForMember(d => d.LastName, m => m.MapFrom(s => s.FirstName));
+            //Mapper.CreateMap<User, UserDTO>().ForMember(d => d.FirstName, m => m.MapFrom(s => s.LastName));
+            //Mapper.CreateMap<User, UserDTO>().ForMember(d => d.LastName, m => m.MapFrom(s => s.FirstName));
 
-            User user = new User() { FirstName = "Liep", LastName = "Nguyen" };
-            var userDto = Mapper.Map<UserDTO>(user);
+            //User user = new User() { FirstName = "Liep", LastName = "Nguyen" };
+            //var userDto = Mapper.Map<UserDTO>(user);
+
+            AutomapperTypeAdapter a = new AutomapperTypeAdapter();
+            a.CreateMap<User, UserDTO>()
+                .ForMember(d => d.FirstName, m => m.MapFrom(s => s.FirstName))
+                .ForMember(d => d.LastName, m => m.MapFrom(s => s.LastName));
 
             //var credential = MongoCredential.CreateMongoCRCredential("planru_system", "liepnguyen", "@dmin348");
 

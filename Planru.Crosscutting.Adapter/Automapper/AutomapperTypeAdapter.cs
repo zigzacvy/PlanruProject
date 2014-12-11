@@ -29,10 +29,10 @@ namespace Planru.Crosscutting.Adapter.Automapper
             return Mapper.Map(source, sourceType, targetType);
         }
 
-        public IMappingExpression CreateMap<TSource, TTarget>()
+        public IMappingExpression<TSource, TTarget> CreateMap<TSource, TTarget>()
         {
-            Mapper.CreateMap<TSource, TTarget>().ForMember(s => s.GetType(), m => m.MapFrom(d => d.GetType()));
-            return null;
+            Mapper.CreateMap<TSource, TTarget>();
+            return new AutomapperMappingExpression<TSource, TTarget>();
         }
     }
 }

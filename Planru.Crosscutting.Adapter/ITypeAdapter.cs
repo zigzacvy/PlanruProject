@@ -34,6 +34,6 @@ namespace Planru.Crosscutting.Adapter
 
         object Adapt(object source, Type TSource, Type TTarget);
 
-        IMappingExpression CreateMap<TSource, TTarget>();
+        IMappingExpression<TSource, TTarget> CreateMap<TSource, TTarget>();
     }
 }
