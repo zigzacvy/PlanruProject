@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Planru.Crosscutting.IoC.Tests.Initializers
 {
     [TestClass]
-    public class TestsInitialize
+    public class TestInitialize
     {
         [AssemblyInitialize]
         public static void InitializeFactories(TestContext context)

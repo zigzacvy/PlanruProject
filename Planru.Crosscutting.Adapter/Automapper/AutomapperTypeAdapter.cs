@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using System;
+using System.Collections.Generic;
+
 namespace Planru.Crosscutting.Adapter.Automapper
 {
     /// <summary>
@@ -22,8 +24,6 @@ namespace Planru.Crosscutting.Adapter.Automapper
             return Mapper.Map<TTarget>(source);
         }
 
-        #endregion
-
         public object Adapt(object source, Type sourceType, Type targetType)
         {
             return Mapper.Map(source, sourceType, targetType);
@@ -34,5 +34,7 @@ namespace Planru.Crosscutting.Adapter.Automapper
             Mapper.CreateMap<TSource, TTarget>();
             return new AutomapperMappingExpression<TSource, TTarget>();
         }
+
+        #endregion
     }
 }

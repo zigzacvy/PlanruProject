@@ -17,12 +17,18 @@ namespace Planru.Crosscutting.Adapter.Automapper
             return memberConfiguration;
         });
 
+        public IMemberConfiguration<TSource> MemberConfiguration
+        { 
+            get { return _memberConfiguration.Value; } 
+        }
+
         public IMappingExpression<TSource, TTarget> ForMember(Expression<Func<TTarget, object>> destinationMember, 
             Action<IMemberConfiguration<TSource>> memberOptions)
         {
             memberOptions(_memberConfiguration.Value);
+
             Mapper.CreateMap<TSource, TTarget>()
-                .ForMember(destinationMember, m => m.MapFrom(_memberConfiguration.Value.SourceMember));
+                .ForMember(destinationMember, m => m.MapFrom(MemberConfiguration.SourceMember));
 
             return this;
         }

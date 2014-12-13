@@ -14,6 +14,9 @@ namespace Planru.Plugins.Directory.Tests.Adapter
         {
             User user = new User() { FirstName = "Liep", LastName = "Nguyen" };
             ITypeAdapter adapter = TypeAdapterFactory.CreateAdapter();
+
+            adapter.CreateMap<User, UserDTO>();
+
             UserDTO userDTO = adapter.Adapt<User, UserDTO>(user);
 
             Assert.AreEqual(user.Id, userDTO.Id);
