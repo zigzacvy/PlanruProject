@@ -54,7 +54,7 @@
     <Compile Include="Models\ClassB.cs" />
     <Compile Include="TestInitialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AutomapperTests\AutomapperTypeAdapterTests.cs" />
+    <Compile Include="AutomapperTests\TypeAdapterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Planru.Crosscutting.Adapter\Planru.Crosscutting.Adapter.csproj">

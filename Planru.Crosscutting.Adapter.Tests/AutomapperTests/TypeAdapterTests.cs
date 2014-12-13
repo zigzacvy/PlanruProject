@@ -6,7 +6,7 @@ using Planru.Crosscutting.Adapter.Tests.Models;
 namespace Planru.Crosscutting.Adapter.Tests.AutomapperTests
 {
     [TestClass]
-    public class AutomapperTypeAdapterTests
+    public class TypeAdapterTests
     {
         ITypeAdapter _typeAdapter;
 
