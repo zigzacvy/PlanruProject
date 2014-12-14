@@ -53,6 +53,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Core.Plugin", "Planr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Crosscutting.Adapter.Tests", "Planru.Crosscutting.Adapter.Tests\Planru.Crosscutting.Adapter.Tests.csproj", "{3EB0881E-6063-46A8-AFC2-CD2D21E8F368}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E909EDDB-7F3E-4949-AB56-DD39C4E4E3C4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
