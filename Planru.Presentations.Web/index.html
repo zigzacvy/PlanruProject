@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <script src="dependencies/respond/dest/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="planruApp">
+<body>
     <!-- Preloader -->
     <div id="preloader">
         <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
@@ -44,7 +44,8 @@
                 </div>
                 <h5 class="sidebartitle">Navigation</h5>
                 <ul class="nav nav-pills nav-stacked nav-bracket">
-                    <li class="active"><a href="index-2.html"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                    <li><a href="#/"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                    <li><a href="#/users"><i class="fa fa-user"></i><span>Users</span></a></li>
                 </ul>
                 <div class="infosummary">
                 </div><!-- infosummary -->
@@ -53,7 +54,7 @@
         <div class="mainpanel">
             <div class="headerbar">
                 <a class="menutoggle"><i class="fa fa-bars"></i></a>
-                <form class="searchform" action="http://themepixels.com/demo/webpage/bracket/index.html" method="post">
+                <form class="searchform" action="#" method="post">
                     <input type="text" class="form-control" name="keyword" placeholder="Search here..." />
                 </form>
                 <div class="header-right">
@@ -263,36 +264,25 @@
 
     </section>
 
-    
-</body>
+    <script src="dependencies/scriptjs/dist/script.min.js"></script>
+    <script src="dependencies/jquery/dist/jquery.min.js"></script>
+    <script src="dependencies/jquery-migrate/jquery-migrate.min.js"></script>
+    <script src="dependencies/jquery-cookie/jquery.cookie.js"></script>
+    <script src="dependencies/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="dependencies/angular/angular.js"></script>
+    <script src="dependencies/angular-route/angular-route.js"></script>
+    <script src="scripts/custom.js"></script>
+    <script src="scripts/dashboard.js"></script>
 
-<script src="dependencies/scriptjs/dist/script.min.js"></script>
-<script src="dependencies/jquery/dist/jquery.min.js"></script>
-<script src="dependencies/jquery-migrate/jquery-migrate.min.js"></script>
-<script src="dependencies/jquery-cookie/jquery.cookie.js"></script>
-<script src="dependencies/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="dependencies/angular/angular.js"></script>
-<script src="dependencies/angular-route/angular-route.js"></script>
-<script src="app/app.js"></script>
-<script src="app/dashboard/dashboardCtrl.js"></script>
-<script src="scripts/custom.js"></script>
-<script src="scripts/dashboard.js"></script>
-
-<!--script type="text/javascript">
-    $script([
-        'dependencies/jquery/dist/jquery.min.js',
-        'dependencies/jquery-migrate/jquery-migrate.min.js',
-        'dependencies/jquery-cookie/jquery.cookie.js',
-        'dependencies/bootstrap/dist/js/bootstrap.min.js',
-        'dependencies/angular/angular.js',
-        'dependencies/angular-route/angular-route.js',
-        'app/app.js',
-        'app/dashboard/dashboardCtrl.js',
-        'scripts/custom.js',
-        'scripts/dashboard.js'
-        ], function() {
-          // when all is done, execute bootstrap angular application
-          angular.bootstrap(document, ['planruApp']);
+    <script type="text/javascript">
+        $script([
+            'app/app.js',
+            'app/dashboard/dashboardCtrl.js',
+            'app/admin/user/userCtrl.js'
+        ], function () {
+            // when all is done, execute bootstrap angular application
+            angular.bootstrap(document, ['planruApp']);
         });
-    </script-->
+    </script>
+</body>
 </html>

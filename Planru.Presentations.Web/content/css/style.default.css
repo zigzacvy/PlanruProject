@@ -59,8 +59,8 @@
 /********** 1. FILE IMPORTS **********/
 /*************************************/
 
-@import url('bootstrap-override.css');
 @import url('../../dependencies/bootstrap/dist/css/bootstrap.min.css');
+@import url('bootstrap-override.css');
 @import url('../../dependencies/fontawesome/css/font-awesome.min.css');
 
 

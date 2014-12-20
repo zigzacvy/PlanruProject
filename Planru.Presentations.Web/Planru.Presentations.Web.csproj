@@ -67,6 +67,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\admin\user\user.html" />
+    <Content Include="app\admin\user\userCtrl.js" />
     <Content Include="app\app.js" />
     <Content Include="app\dashboard\dashboard.html" />
     <Content Include="app\dashboard\dashboardCtrl.js" />

@@ -8,9 +8,9 @@ angular
         templateUrl: 'app/dashboard/dashboard.html',
         controller: 'dashboardCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/users', {
+        templateUrl: 'app/admin/user/user.html',
+        controller: 'userCtrl'
       })
       .otherwise({
         redirectTo: '/'
