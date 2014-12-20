@@ -35,8 +35,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Plugins.Directory.We
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentations", "Presentations", "{0446F99B-7D30-4BD9-9D8C-B1CB807BDF05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Presentations.Web", "Planru.Presentations.Web\Planru.Presentations.Web.csproj", "{F208FC06-004F-4562-9F69-A9E7F849CC3F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Crosscutting.Logging", "Planru.Crosscutting.Logging\Planru.Crosscutting.Logging.csproj", "{212B9252-B4AD-40CD-A893-25DAC6305FB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Crosscutting.Common", "Planru.Crosscutting.Common\Planru.Crosscutting.Common.csproj", "{ECC001C0-8BC3-4C9D-8D32-4CABB030F16E}"
@@ -53,10 +51,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Core.Plugin", "Planr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Crosscutting.Adapter.Tests", "Planru.Crosscutting.Adapter.Tests\Planru.Crosscutting.Adapter.Tests.csproj", "{3EB0881E-6063-46A8-AFC2-CD2D21E8F368}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E909EDDB-7F3E-4949-AB56-DD39C4E4E3C4}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planru.Presentations.Web", "Planru.Presentations.Web\Planru.Presentations.Web.csproj", "{35070A93-C4D8-40BC-9195-66407BE42758}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,10 +91,6 @@ Global
 		{E477281A-2127-4703-B30F-E2ED074E016D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E477281A-2127-4703-B30F-E2ED074E016D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E477281A-2127-4703-B30F-E2ED074E016D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F208FC06-004F-4562-9F69-A9E7F849CC3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F208FC06-004F-4562-9F69-A9E7F849CC3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F208FC06-004F-4562-9F69-A9E7F849CC3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F208FC06-004F-4562-9F69-A9E7F849CC3F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{212B9252-B4AD-40CD-A893-25DAC6305FB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{212B9252-B4AD-40CD-A893-25DAC6305FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{212B9252-B4AD-40CD-A893-25DAC6305FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -128,6 +119,10 @@ Global
 		{3EB0881E-6063-46A8-AFC2-CD2D21E8F368}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EB0881E-6063-46A8-AFC2-CD2D21E8F368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EB0881E-6063-46A8-AFC2-CD2D21E8F368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35070A93-C4D8-40BC-9195-66407BE42758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35070A93-C4D8-40BC-9195-66407BE42758}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35070A93-C4D8-40BC-9195-66407BE42758}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35070A93-C4D8-40BC-9195-66407BE42758}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,7 +143,7 @@ Global
 		{542A22A6-2691-498D-B7D6-0F5D341C9263} = {49B55C31-6F90-47A8-857A-ADDF86A6C7E2}
 		{DA77F522-2FCC-43EB-BF92-396A593272AC} = {49B55C31-6F90-47A8-857A-ADDF86A6C7E2}
 		{3EB0881E-6063-46A8-AFC2-CD2D21E8F368} = {49B55C31-6F90-47A8-857A-ADDF86A6C7E2}
-		{F208FC06-004F-4562-9F69-A9E7F849CC3F} = {0446F99B-7D30-4BD9-9D8C-B1CB807BDF05}
+		{35070A93-C4D8-40BC-9195-66407BE42758} = {0446F99B-7D30-4BD9-9D8C-B1CB807BDF05}
 		{80347BF6-7EBE-479F-8438-BED0E5E87379} = {72F57F5E-37B2-4782-B4D9-268429433CA7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

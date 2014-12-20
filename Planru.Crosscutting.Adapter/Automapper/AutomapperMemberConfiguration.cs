@@ -18,5 +18,10 @@ namespace Planru.Crosscutting.Adapter.Automapper
         }
 
         public Expression<Func<TSource, object>> SourceMember { get { return _sourceMember; } }
+
+        public void Ignore()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
