@@ -6,13 +6,18 @@
                 <a href="" class="minimize">−</a>
             </div>
             <h4 class="panel-title">Users</h4>
-            <p></p>
         </div>
         <div class="panel-body">
-            <table ng-table="tableParams" class="table">
+            <div class="form-group">
+                <a href="#" class="btn-sm"><i class="fa fa-plus fa-lg"></i></a>
+                <a href="#" class="btn-sm"><i class="fa fa-users fa-lg"></i></a>
+                <a href="#" class="btn-sm"><i class="fa fa-search fa-lg"></i></a>
+            </div>
+            <table ng-table="tableParams" class="table table-bordered table-striped">
                 <tr ng-repeat="user in $data">
-                    <td data-title="'Name'">{{user.name}}</td>
-                    <td data-title="'Age'">{{user.age}}</td>
+                    <td data-title="'Display Name'">{{user.name}}</td>
+                    <td data-title="'User Name'">{{user.age}}</td>
+                    <td data-title="'Status'">Active</td>
                 </tr>
             </table>
         </div><!-- panel-body -->
