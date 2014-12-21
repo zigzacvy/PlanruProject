@@ -1,7 +1,8 @@
 var app = angular
   .module('planruApp', [
     'ngRoute',
-    'ngTable'
+    'ngTable',
+    'bootstrapModal'
   ])
   .config(function ($routeProvider) {
       $routeProvider

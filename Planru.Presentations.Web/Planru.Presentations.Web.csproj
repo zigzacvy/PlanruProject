@@ -58,7 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".bowerrc" />
+    <Content Include="app\admin\user\create\createUser.html" />
+    <Content Include="app\admin\user\create\createUserCtrl.js" />
+    <Content Include="app\admin\user\create\createUserSvc.js" />
     <Content Include="app\admin\user\userSvc.js" />
+    <Content Include="app\common\directives\bootstrapModal\bootstrapModal.html" />
+    <Content Include="app\common\directives\bootstrapModal\bootstrapModal.js" />
     <Content Include="app\layout\layoutCtrl.js" />
     <Content Include="bower.json" />
     <Content Include="content\css\lato.css" />
@@ -349,7 +354,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="app\common\services\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
