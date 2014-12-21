@@ -1,29 +1,20 @@
-﻿<div class="panel panel-default">
-    <div class="panel-heading">
-        <div class="panel-btns">
-            <a href="" class="panel-close">×</a>
-            <a href="" class="minimize">−</a>
+﻿<section ng-controller="userCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-btns">
+                <a href="" class="panel-close">×</a>
+                <a href="" class="minimize">−</a>
+            </div>
+            <h4 class="panel-title">Users</h4>
+            <p></p>
         </div>
-        <h4 class="panel-title">Users</h4>
+        <div class="panel-body">
+            <table ng-table="tableParams" class="table">
+                <tr ng-repeat="user in $data">
+                    <td data-title="'Name'">{{user.name}}</td>
+                    <td data-title="'Age'">{{user.age}}</td>
+                </tr>
+            </table>
+        </div><!-- panel-body -->
     </div>
-    <div class="panel-body">
-        <p>Input masks allows a user to more easily enter fixed width input where you would like them to enter the data in a certain format (dates,phones, etc).</p>
-        <br>
-
-        <div class="input-group mb15">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-            <input type="text" placeholder="Date" id="date" class="form-control">
-        </div>
-
-        <div class="input-group mb20">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <input type="text" placeholder="Phone" id="phone" class="form-control">
-        </div>
-
-        <div class="input-group mb20">
-            <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i></span>
-            <input type="text" placeholder="SSN" id="ssn" class="form-control">
-        </div>
-
-    </div>
-</div>
+</section>

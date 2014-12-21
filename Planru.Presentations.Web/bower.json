@@ -25,6 +25,8 @@
     "jquery-cookie": "~1.4.1",
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2",
-    "scriptjs": "~2.5.7"
+    "scriptjs": "~2.5.7",
+    "ng-grid": "~2.0.14",
+    "ng-table": "~0.3.3"
   }
 }

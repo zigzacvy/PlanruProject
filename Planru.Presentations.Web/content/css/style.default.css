@@ -61,7 +61,10 @@
 
 @import url('../../dependencies/bootstrap/dist/css/bootstrap.min.css');
 @import url('bootstrap-override.css');
+@import url('../../dependencies/ng-table/ng-table.min.css');
 @import url('../../dependencies/fontawesome/css/font-awesome.min.css');
+@import url('lato.css');
+
 
 
 /********** 2. RESET STYLES **********/

@@ -59,6 +59,47 @@
   <ItemGroup>
     <Content Include=".bowerrc" />
     <Content Include="bower.json" />
+    <Content Include="content\css\lato.css" />
+    <Content Include="content\fonts\lato\Lato-Bla-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-Bla-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-Bla-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-Bla-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-BlaIta-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-BlaIta-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-BlaIta-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-BlaIta-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-Bol-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-Bol-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-Bol-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-Bol-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-BolIta-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-BolIta-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-BolIta-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-BolIta-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-Hai-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-Hai-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-Hai-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-Hai-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-HaiIta-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-HaiIta-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-HaiIta-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-HaiIta-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-Lig-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-Lig-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-Lig-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-Lig-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-LigIta-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-LigIta-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-LigIta-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-LigIta-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-Reg-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-Reg-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-Reg-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-Reg-webfontd41d.eot" />
+    <Content Include="content\fonts\lato\Lato-RegIta-webfont.eot" />
+    <Content Include="content\fonts\lato\Lato-RegIta-webfont.ttf" />
+    <Content Include="content\fonts\lato\Lato-RegIta-webfont.woff" />
+    <Content Include="content\fonts\lato\Lato-RegIta-webfontd41d.eot" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -74,6 +115,16 @@
     <Content Include="app\dashboard\dashboardCtrl.js" />
     <Content Include="content\css\bootstrap-override.css" />
     <Content Include="content\css\style.default.css" />
+    <Content Include="content\fonts\lato\Lato-Bla-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-BlaIta-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-Bol-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-BolIta-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-Hai-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-HaiIta-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-Lig-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-LigIta-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-Reg-webfont.svg" />
+    <Content Include="content\fonts\lato\Lato-RegIta-webfont.svg" />
     <Content Include="content\images\calendar-arrow.png" />
     <Content Include="content\images\clear.png" />
     <Content Include="content\images\close-white.png" />
@@ -215,9 +266,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="content\fonts\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
