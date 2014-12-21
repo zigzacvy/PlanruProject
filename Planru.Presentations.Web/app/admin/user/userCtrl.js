@@ -1,4 +1,10 @@
 ﻿app.controller('userCtrl', ['$scope', 'ngTableParams', function ($scope, ngTableParams) {
+    $scope.showUserModal = false;
+
+    $scope.toggleUserModal = function () {
+        $scope.showUserModal = !$scope.showUserModal;
+    };
+
     var data = [{ name: "Moroni", age: 50 },
                 { name: "Tiancum", age: 43 },
                 { name: "Jacob", age: 27 },

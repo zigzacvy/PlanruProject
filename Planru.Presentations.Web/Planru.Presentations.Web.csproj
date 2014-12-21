@@ -58,9 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".bowerrc" />
-    <Content Include="app\admin\user\create\createUser.html" />
-    <Content Include="app\admin\user\create\createUserCtrl.js" />
-    <Content Include="app\admin\user\create\createUserSvc.js" />
     <Content Include="app\admin\user\userSvc.js" />
     <Content Include="app\common\directives\bootstrapModal\bootstrapModal.html" />
     <Content Include="app\common\directives\bootstrapModal\bootstrapModal.js" />
