@@ -75,6 +75,11 @@ h4, .h4 {
    padding-right: 10px;
 }
 
+.form-horizontal .form-group {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 .form-group::after {
    clear: both;
    display: block;
