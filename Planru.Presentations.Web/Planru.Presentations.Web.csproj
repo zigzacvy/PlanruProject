@@ -169,6 +169,7 @@
     <Content Include="content\fonts\roboto\Roboto-ThinItalic-webfont.ttf" />
     <Content Include="content\fonts\roboto\Roboto-ThinItalic-webfont.woff" />
     <Content Include="content\fonts\roboto\Roboto-ThinItalic-webfontd41d.eot" />
+    <None Include="scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
