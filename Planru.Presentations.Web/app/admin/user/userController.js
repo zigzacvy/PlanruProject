@@ -5,6 +5,8 @@
         $scope.showUserModal = !$scope.showUserModal;
     };
 
+    var vm = this;
+
     var data = [{ name: "Moroni", age: 50 },
                 { name: "Tiancum", age: 43 },
                 { name: "Jacob", age: 27 },

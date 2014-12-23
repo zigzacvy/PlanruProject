@@ -58,12 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".bowerrc" />
-    <Content Include="app\admin\user\create\createUser.html" />
-    <Content Include="app\admin\user\create\createUserCtrl.js" />
-    <Content Include="app\admin\user\userSvc.js" />
+    <Content Include="app\admin\user\partials\userEdit.html" />
+    <Content Include="app\admin\user\partials\userNew.html" />
+    <Content Include="app\admin\user\userService.js" />
     <Content Include="app\common\directives\bootstrapModal\bootstrapModal.html" />
     <Content Include="app\common\directives\bootstrapModal\bootstrapModal.js" />
-    <Content Include="app\layout\layoutCtrl.js" />
     <Content Include="bower.json" />
     <Content Include="content\css\lato.css" />
     <Content Include="content\css\roboto.css" />
@@ -175,8 +174,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\admin\user\user.html" />
-    <Content Include="app\admin\user\userCtrl.js" />
+    <Content Include="app\admin\user\userView.html" />
+    <Content Include="app\admin\user\userController.js" />
     <Content Include="app\app.js" />
     <Content Include="app\dashboard\dashboard.html" />
     <Content Include="app\dashboard\dashboardCtrl.js" />
