@@ -2,19 +2,24 @@ var app = angular
   .module('planruApp', [
     'ngRoute',
     'ngTable',
+    'ui.router',
     'bootstrapModal'
   ])
-  .config(function ($routeProvider) {
-      $routeProvider
-        .when('/', {
-            templateUrl: 'app/dashboard/dashboard.html',
-            controller: 'dashboardCtrl'
+  .config(['$stateProvider', function ($stateProvider) {
+      $stateProvider
+        .state('dashboard', {
+            url: '/',
+            templateUrl: 'app/dashboard/dashboardView.html',
+            controller: 'dashboardController'
         })
-        .when('/users', {
-            templateUrl: 'app/admin/user/user.html',
-            controller: 'userCtrl'
+        .state('users', {
+            url: '/users',
+            templateUrl: 'app/admin/user/userView.html',
+            controller: 'userController'
         })
-        .otherwise({
-            redirectTo: '/'
+        .state('users.create', {
+            url: '/create',
+            templateUrl: 'app/admin/user/partials/create.html',
+            controller: 'userController'
         });
-  });
+  }]);

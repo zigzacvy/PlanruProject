@@ -20,7 +20,7 @@
         <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
     </div>
 
-    <section ng-controller="layoutCtrl">
+    <section>
         <div class="leftpanel">
             <div class="logopanel">
                 <h1><span>[</span> Planru <span>]</span></h1>
@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div class="contentpanel">
-                <div ng-view=""></div>
+                <div ui-view></div>
             </div><!-- contentpanel -->
         </div><!-- mainpanel -->
         <div class="rightpanel">
@@ -109,6 +109,7 @@
     <script src="dependencies/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="dependencies/angular/angular.js"></script>
     <script src="dependencies/angular-route/angular-route.js"></script>
+    <script src="dependencies/ui-router/release/angular-ui-router.min.js"></script>
     <script src="dependencies/ng-table/ng-table.min.js"></script>
     <script src="app/common/directives/bootstrapModal/bootstrapModal.js"></script>
     <script src="app/app.js"></script>
@@ -117,9 +118,8 @@
 
     <script type="text/javascript">
         $script([
-            'app/dashboard/dashboardCtrl.js',
-            'app/admin/user/userCtrl.js',
-            'app/layout/layoutCtrl.js'
+            'app/dashboard/dashboardController.js',
+            'app/admin/user/userController.js'
         ], function () {
             // when all is done, execute bootstrap angular application
             angular.bootstrap(document, ['planruApp']);

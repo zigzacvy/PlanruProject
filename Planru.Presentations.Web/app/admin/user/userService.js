@@ -1,3 +1,3 @@
-﻿app.service('userSvc', ['', function () {
+﻿app.service('userService', ['', function () {
 
 }]);

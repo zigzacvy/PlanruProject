@@ -1,4 +1,4 @@
-﻿<section ng-controller="userCtrl">
+﻿<section ng-controller="userController">
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="panel-btns">
@@ -9,7 +9,7 @@
         </div>
         <div class="panel-body">
             <div class="form-group">
-                <a href="" class="btn-sm" ng-click="toggleUserModal()"><i class="fa fa-plus fa-lg"></i></a>
+                <a href="#/users/create" class="btn-sm" ng-click="toggleUserModal()"><i class="fa fa-plus fa-lg"></i></a>
                 <a href="" class="btn-sm"><i class="fa fa-users fa-lg"></i></a>
                 <a href="" class="btn-sm"><i class="fa fa-search fa-lg"></i></a>
             </div>
@@ -22,7 +22,8 @@
             </table>
         </div><!-- panel-body -->
     </div>
-    <modal title="Create a new user account" visible="showUserModal">
-        <ng-include src="'app/admin/user/create/createUser.html'"></ng-include>
-    </modal><!-- user creation modal -->
+    <!--<modal title="Create a new user account" visible="showUserModal">
+        <ng-include src="'app/admin/user/partials/create.html'"></ng-include>
+    </modal> --> 
+    <div ui-view></div>
 </section>

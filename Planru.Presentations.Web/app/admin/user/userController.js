@@ -1,4 +1,4 @@
-﻿app.controller('userCtrl', ['$scope', 'ngTableParams', function ($scope, ngTableParams) {
+﻿app.controller('userController', ['$scope', 'ngTableParams', function ($scope, ngTableParams) {
     $scope.showUserModal = false;
 
     $scope.toggleUserModal = function () {
