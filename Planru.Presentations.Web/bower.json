@@ -28,6 +28,7 @@
     "scriptjs": "~2.5.7",
     "ng-grid": "~2.0.14",
     "ng-table": "~0.3.3",
-    "ui-router": "~0.2.13"
+    "ui-router": "~0.2.13",
+    "angular-bootstrap": "~0.12.0"
   }
 }

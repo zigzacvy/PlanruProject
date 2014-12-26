@@ -1,6 +1,5 @@
 var app = angular
   .module('planruApp', [
-    'ngRoute',
     'ngTable',
     'ui.router',
     'bootstrapModal'
