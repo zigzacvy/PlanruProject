@@ -58,8 +58,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".bowerrc" />
-    <Content Include="app\admin\user\partials\edit.html" />
-    <Content Include="app\admin\user\partials\create.html" />
+    <Content Include="app\admin\user\create\userCreateController.js" />
+    <Content Include="app\admin\user\edit\userEditController.js" />
+    <Content Include="app\admin\user\edit\userEditView.html" />
+    <Content Include="app\admin\user\create\userCreateView.html" />
     <Content Include="app\admin\user\userService.js" />
     <Content Include="app\common\directives\bootstrapModal\bootstrapModal.html" />
     <Content Include="app\common\directives\bootstrapModal\bootstrapModal.js" />

@@ -2,6 +2,7 @@ var app = angular
   .module('planruApp', [
     'ngTable',
     'ui.router',
+    'ui.bootstrap',
     'bootstrapModal'
   ])
   .config(['$stateProvider', function ($stateProvider) {
@@ -17,8 +18,11 @@ var app = angular
             controller: 'userController'
         })
         .state('users.create', {
-            url: '/create',
-            templateUrl: 'app/admin/user/partials/create.html',
-            controller: 'userController'
+            url: '/create'
         });
-  }]);
+  }])
+  .run(function ($rootScope) {
+      $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
+          $rootScope.previousState = from.name;
+      });
+  });

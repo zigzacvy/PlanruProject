@@ -83,6 +83,17 @@ body.signin {
     background: #e4e7ea;
 }
 
+/* overlay styles, all needed */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
 input,select,textarea {
     font-family: 'LatoRegular', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, sans-serif !important;
     color: #636e7b;
