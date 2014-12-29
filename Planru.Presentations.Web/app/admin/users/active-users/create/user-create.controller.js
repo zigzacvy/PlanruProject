@@ -1,10 +1,8 @@
-﻿app.controller('UserCreateController', ['$scope', '$modalInstance', 'userController',
-    function ($scope, $modalInstance, userCtrl) {
+﻿app.controller('UserCreateController', ['$scope', '$modalInstance', 'userCtrl', 'userService',
+    function ($scope, $modalInstance, userCtrl, userService) {
         var vm = this;
 
         $modalInstance.result.then(function () {
-            console.log(vm);
-        }, function () {
 
         });
 

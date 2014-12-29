@@ -3,7 +3,7 @@ var app = angular
     'ngTable',
     'ui.router',
     'ui.bootstrap',
-    'bootstrapModal'
+    'ngResource'
   ])
   .config(['$stateProvider', function ($stateProvider) {
       $stateProvider

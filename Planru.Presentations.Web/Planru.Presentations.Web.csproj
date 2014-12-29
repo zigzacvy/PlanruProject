@@ -352,6 +352,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\admin\users\active-users\list\" />
     <Folder Include="app\admin\users\deleted-users\" />
     <Folder Include="app\common\services\" />
   </ItemGroup>

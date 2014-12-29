@@ -119,6 +119,7 @@
     <script src="dependencies/ng-table/ng-table.min.js"></script>
     <script src="dependencies/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="dependencies/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="dependencies/angular-resource/angular-resource.min.js"></script>
 
     <script src="app/common/directives/bootstrap-modal/bootstrap-modal.directive.js"></script>
     <script src="app/app.module.js"></script>
@@ -129,13 +130,18 @@
 
     <script type="text/javascript">
         $script([
+            'app/admin/users/users.service.js'
+        ], function () {
+            $script([
             'app/dashboard/dashboard.controller.js',
             'app/admin/users/active-users/active-user.controller.js',
             'app/admin/users/active-users/create/user-create.controller.js'
-        ], function () {
-            // when all is done, execute bootstrap angular application
-            angular.bootstrap(document, ['planruApp']);
+            ], function () {
+                // when all is done, execute bootstrap angular application
+                angular.bootstrap(document, ['planruApp']);
+            });
         });
+        
     </script>
 </body>
 </html>

@@ -3,15 +3,15 @@
         $rootScope.title = 'Users';
         var vm = this;
 
-        $scope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
-            if (to.name == 'active-users.create') {
+        $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            if (toState.name == 'active-users.create') {
                 var modalInstance = $modal.open({
                     templateUrl: 'app/admin/users/active-users/create/user-create.view.html',
                     controller: 'UserCreateController',
                     controllerAs: 'vm',
                     backdrop: true,
                     backdropClass: 'overlay',
-                    resolve: { userController: function () { return vm; } }
+                    resolve: { userCtrl: function () { return vm; } }
                 }).result.finally(function () {
                     $state.go('active-users');
                 });

@@ -1,4 +1,4 @@
-﻿var bootstrapModal = angular.module('bootstrapModal', []);
+﻿var bootstrapModal = angular.module('bootstrap-modal', []);
 
 bootstrapModal.directive('modal', function () {
     return {
