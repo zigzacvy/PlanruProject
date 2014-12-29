@@ -120,16 +120,18 @@
     <script src="dependencies/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="dependencies/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
-    <script src="app/common/directives/bootstrapModal/bootstrapModal.js"></script>
-    <script src="app/app.js"></script>
+    <script src="app/common/directives/bootstrap-modal/bootstrap-modal.directive.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.routes.js"></script>
     <script src="scripts/custom.js"></script>
     <script src="scripts/dashboard.js"></script>
 
     <script type="text/javascript">
         $script([
-            'app/dashboard/dashboardController.js',
-            'app/admin/user/activeUser/activeUserController.js',
-            'app/admin/user/activeUser/create/userCreateController.js'
+            'app/dashboard/dashboard.controller.js',
+            'app/admin/users/active-users/active-user.controller.js',
+            'app/admin/users/active-users/create/user-create.controller.js'
         ], function () {
             // when all is done, execute bootstrap angular application
             angular.bootstrap(document, ['planruApp']);

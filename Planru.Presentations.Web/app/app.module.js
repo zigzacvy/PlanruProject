@@ -9,15 +9,15 @@ var app = angular
       $stateProvider
         .state('dashboard', {
             url: '/',
-            templateUrl: 'app/dashboard/dashboardView.html',
-            controller: 'dashboardController'
+            templateUrl: 'app/dashboard/dashboard.view.html',
+            controller: 'DashboardController'
         })
-        .state('activeUsers', {
+        .state('active-users', {
             url: '/active-users',
-            templateUrl: 'app/admin/user/activeUser/activeUserView.html',
-            controller: 'userController'
+            templateUrl: 'app/admin/users/active-users/active-user.view.html',
+            controller: 'UserController'
         })
-        .state('activeUsers.create', {
+        .state('active-users.create', {
             url: '/create'
         });
   }])

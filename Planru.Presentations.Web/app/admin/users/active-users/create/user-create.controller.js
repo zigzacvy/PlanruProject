@@ -1,4 +1,4 @@
-﻿app.controller('userCreateController', ['$scope', '$modalInstance', 'userController',
+﻿app.controller('UserCreateController', ['$scope', '$modalInstance', 'userController',
     function ($scope, $modalInstance, userCtrl) {
         var vm = this;
 
