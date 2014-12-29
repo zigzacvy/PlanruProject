@@ -5,11 +5,11 @@
                 <a href="" class="panel-close">×</a>
                 <a href="" class="minimize">−</a>
             </div>
-            <h4 class="panel-title">Users</h4>
+            <h4 class="panel-title">Active Users</h4>
         </div>
         <div class="panel-body">
             <div class="form-group">
-                <a href="#/users/create" class="btn-sm" ng-click="toggleUserModal()"><i class="fa fa-plus fa-lg"></i></a>
+                <a ui-sref="activeUsers.create" class="btn-sm"><i class="fa fa-plus fa-lg"></i></a>
                 <a href="" class="btn-sm"><i class="fa fa-users fa-lg"></i></a>
                 <a href="" class="btn-sm"><i class="fa fa-search fa-lg"></i></a>
             </div>
@@ -22,9 +22,4 @@
             </table>
         </div><!-- panel-body -->
     </div>
-    <!--<modal title="Create a new user account" visible="showUserModal">
-        <ng-include src="'app/admin/user/partials/create.html'"></ng-include>
-    </modal>-->
-
-    
 </section>

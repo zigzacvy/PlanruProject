@@ -45,8 +45,14 @@
                 </div>
                 <h5 class="sidebartitle">Navigation</h5>
                 <ul class="nav nav-pills nav-stacked nav-bracket">
-                    <li><a href="#/"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-                    <li><a href="#/users"><i class="fa fa-user"></i><span>Users</span></a></li>
+                    <li><a ui-sref="dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
+                    <li><a ui-sref="activeUsers"><i class="fa fa-user"></i><span>Users</span></a></li>
+                    <li class="nav-parent">
+                        <a href=""><i class="fa fa-edit"></i> <span>Forms</span></a>
+                        <ul class="children">
+                            <li><a href="general-forms.html"><i class="fa fa-caret-right"></i> General Forms</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <div class="infosummary">
                 </div><!-- infosummary -->
@@ -84,7 +90,7 @@
                 </div><!-- header-right -->
             </div><!-- headerbar -->
             <div class="pageheader">
-                <h2><i class="fa fa-home"></i> Dashboard <span>Subtitle goes here...</span></h2>
+                <h2><i class="fa fa-home"></i>{{ title }}<span>Subtitle goes here...</span></h2>
                 <div class="breadcrumb-wrapper">
                     <span class="label">You are here:</span>
                     <ol class="breadcrumb">
@@ -122,8 +128,8 @@
     <script type="text/javascript">
         $script([
             'app/dashboard/dashboardController.js',
-            'app/admin/user/userController.js',
-            'app/admin/user/create/userCreateController.js'
+            'app/admin/user/activeUser/activeUserController.js',
+            'app/admin/user/activeUser/create/userCreateController.js'
         ], function () {
             // when all is done, execute bootstrap angular application
             angular.bootstrap(document, ['planruApp']);

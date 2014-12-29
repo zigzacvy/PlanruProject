@@ -12,12 +12,12 @@ var app = angular
             templateUrl: 'app/dashboard/dashboardView.html',
             controller: 'dashboardController'
         })
-        .state('users', {
-            url: '/users',
-            templateUrl: 'app/admin/user/userView.html',
+        .state('activeUsers', {
+            url: '/active-users',
+            templateUrl: 'app/admin/user/activeUser/activeUserView.html',
             controller: 'userController'
         })
-        .state('users.create', {
+        .state('activeUsers.create', {
             url: '/create'
         });
   }])

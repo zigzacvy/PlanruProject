@@ -58,13 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".bowerrc" />
-    <Content Include="app\admin\user\create\userCreateController.js" />
-    <Content Include="app\admin\user\edit\userEditController.js" />
-    <Content Include="app\admin\user\edit\userEditView.html" />
-    <Content Include="app\admin\user\create\userCreateView.html" />
-    <Content Include="app\admin\user\userService.js" />
-    <Content Include="app\common\directives\bootstrapModal\bootstrapModal.html" />
-    <Content Include="app\common\directives\bootstrapModal\bootstrapModal.js" />
+    <Content Include="app\admin\users\active-users\create\user-create.controller.js" />
+    <Content Include="app\admin\users\active-users\edit\user-edit.controller.js" />
+    <Content Include="app\admin\users\active-users\edit\user-edit.view.html" />
+    <Content Include="app\admin\users\active-users\create\user-create.view.html" />
+    <Content Include="app\admin\users\users.service.js" />
+    <Content Include="app\app.routes.js" />
+    <Content Include="app\common\directives\bootstrap-modal\bootstrap-modal.view.html" />
+    <Content Include="app\common\directives\bootstrap-modal\bootstrap-modal.directive.js" />
     <Content Include="bower.json" />
     <Content Include="content\css\lato.css" />
     <Content Include="content\css\roboto.css" />
@@ -172,15 +173,16 @@
     <Content Include="content\fonts\roboto\Roboto-ThinItalic-webfont.ttf" />
     <Content Include="content\fonts\roboto\Roboto-ThinItalic-webfont.woff" />
     <Content Include="content\fonts\roboto\Roboto-ThinItalic-webfontd41d.eot" />
+    <Content Include="app\app.config.js" />
     <None Include="scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\admin\user\userView.html" />
-    <Content Include="app\admin\user\userController.js" />
-    <Content Include="app\app.js" />
-    <Content Include="app\dashboard\dashboardView.html" />
-    <Content Include="app\dashboard\dashboardController.js" />
+    <Content Include="app\admin\users\active-users\active-user.view.html" />
+    <Content Include="app\admin\users\active-users\active-user.controller.js" />
+    <Content Include="app\app.module.js" />
+    <Content Include="app\dashboard\dashboard.view.html" />
+    <Content Include="app\dashboard\dashboard.controller.js" />
     <Content Include="content\css\bootstrap-override.css" />
     <Content Include="content\css\style.default.css" />
     <Content Include="content\fonts\lato\Lato-Bla-webfont.svg" />
@@ -350,6 +352,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\admin\users\deleted-users\" />
     <Folder Include="app\common\services\" />
   </ItemGroup>
   <ItemGroup>

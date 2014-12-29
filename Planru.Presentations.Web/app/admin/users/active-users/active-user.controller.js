@@ -1,20 +1,19 @@
 ﻿app.controller('userController', ['$scope', 'ngTableParams', '$modal', '$state', '$modal', '$rootScope',
     function ($scope, ngTableParams, $modal, $state, $modal, $rootScope) {
+        $rootScope.title = 'Users';
         var vm = this;
 
-        vm.nothing = "nothing";
-
         $scope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
-            if (to.name == 'users.create') {
+            if (to.name == 'activeUsers.create') {
                 var modalInstance = $modal.open({
-                    templateUrl: 'app/admin/user/create/userCreateView.html',
+                    templateUrl: 'app/admin/user/activeUser/create/userCreateView.html',
                     controller: 'userCreateController',
                     controllerAs: 'vm',
                     backdrop: true,
                     backdropClass: 'overlay',
                     resolve: { userController: function () { return vm; } }
                 }).result.finally(function () {
-                    $state.go('users');
+                    $state.go('activeUsers');
                 });
             }
         });
