@@ -14,15 +14,23 @@ var app = angular
         })
         .state('active-users', {
             url: '/active-users',
-            templateUrl: 'app/admin/users/active-users/active-user.view.html',
-            controller: 'UserController'
+            views: {
+                '': {
+                    templateUrl: 'app/admin/users/active-users/active-user.view.html',
+                    controller: 'UserController'
+                },
+                'user-list@active-users': {
+                    templateUrl: 'app/admin/users/active-users/list/user-list.view.html',
+                    controller: 'UserListController'
+                }
+            }
         })
         .state('active-users.create', {
             url: '/create'
         });
   }])
   .run(function ($rootScope) {
-      $rootScope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
-          $rootScope.previousState = from.name;
+      $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+          $rootScope.previousState = fromState.name;
       });
   });

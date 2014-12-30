@@ -62,6 +62,8 @@
     <Content Include="app\admin\users\active-users\edit\user-edit.controller.js" />
     <Content Include="app\admin\users\active-users\edit\user-edit.view.html" />
     <Content Include="app\admin\users\active-users\create\user-create.view.html" />
+    <Content Include="app\admin\users\active-users\list\user-list.controller.js" />
+    <Content Include="app\admin\users\active-users\list\user-list.view.html" />
     <Content Include="app\admin\users\users.service.js" />
     <Content Include="app\app.routes.js" />
     <Content Include="app\common\directives\bootstrap-modal\bootstrap-modal.view.html" />
@@ -352,7 +354,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\admin\users\active-users\list\" />
     <Folder Include="app\admin\users\deleted-users\" />
     <Folder Include="app\common\services\" />
   </ItemGroup>
