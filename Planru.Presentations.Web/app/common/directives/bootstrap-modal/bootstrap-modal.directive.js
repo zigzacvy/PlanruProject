@@ -2,7 +2,7 @@
 
 bootstrapModal.directive('modal', function () {
     return {
-        templateUrl: 'app/common/directives/bootstrapModal/bootstrapModal.html',
+        templateUrl: 'app/common/directives/bootstrap-modal/bootstrap-modal.html',
         restrict: 'E',
         transclude: true,
         replace: true,

@@ -58,13 +58,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".bowerrc" />
+    <Content Include="app\admin\groups\create\group-create.view.controller.js" />
+    <Content Include="app\admin\groups\create\group-create.view.html" />
+    <Content Include="app\admin\groups\edit\group-edit.controller.js" />
+    <Content Include="app\admin\groups\edit\group-edit.view.html" />
+    <Content Include="app\admin\groups\group.controller.js" />
+    <Content Include="app\admin\groups\group.view.html" />
+    <Content Include="app\admin\groups\group.service.js" />
+    <Content Include="app\admin\groups\list\group-list.controller.js" />
+    <Content Include="app\admin\groups\list\group-list.view.html" />
     <Content Include="app\admin\users\active-users\create\user-create.controller.js" />
     <Content Include="app\admin\users\active-users\edit\user-edit.controller.js" />
     <Content Include="app\admin\users\active-users\edit\user-edit.view.html" />
     <Content Include="app\admin\users\active-users\create\user-create.view.html" />
     <Content Include="app\admin\users\active-users\list\user-list.controller.js" />
     <Content Include="app\admin\users\active-users\list\user-list.view.html" />
-    <Content Include="app\admin\users\users.service.js" />
+    <Content Include="app\admin\users\deleted-users\deleted-user.controller.js" />
+    <Content Include="app\admin\users\deleted-users\deleted-user.view.html" />
+    <Content Include="app\admin\users\deleted-users\list\deleted-user-list.controller.js" />
+    <Content Include="app\admin\users\deleted-users\list\deleted-user-list.view.html" />
+    <Content Include="app\admin\users\user.controller.js" />
+    <Content Include="app\admin\users\user.view.html" />
+    <Content Include="app\admin\users\user.service.js" />
     <Content Include="app\app.routes.js" />
     <Content Include="app\common\directives\bootstrap-modal\bootstrap-modal.view.html" />
     <Content Include="app\common\directives\bootstrap-modal\bootstrap-modal.directive.js" />
@@ -354,7 +369,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\admin\users\deleted-users\" />
     <Folder Include="app\common\services\" />
   </ItemGroup>
   <ItemGroup>
