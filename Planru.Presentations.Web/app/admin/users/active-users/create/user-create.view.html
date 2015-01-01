@@ -46,8 +46,8 @@
                 </div>
             </div>
         </div>
-        <div class="form-group" ng-switch on="vm.passwordOption">
-            <div ng-switch-when="2">
+        <div class="form-group" >
+            <div ng-if="vm.passwordOption == 2">
                 <div class="col-sm-6">
                     <input type="password" class="form-control" placeholder="Enter password" ng-model="vm.password">
                 </div>
@@ -55,8 +55,8 @@
                     <input type="password" class="form-control" placeholder="Re-enter password" ng-model="vm.confirmedPassword">
                 </div>
             </div>
-            <div ng-switch-when="1">
-
+            <div ng-if="vm.passwordOption == 1">
+                <div class="alert alert-info">New password will be displayed in the next page</div>
             </div>
         </div>
         <div class="modal-footer">

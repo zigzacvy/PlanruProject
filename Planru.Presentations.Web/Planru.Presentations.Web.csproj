@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".bowerrc" />
-    <Content Include="app\admin\groups\create\group-create.view.controller.js" />
+    <Content Include="app\admin\groups\create\group-create.controller.js" />
     <Content Include="app\admin\groups\create\group-create.view.html" />
     <Content Include="app\admin\groups\edit\group-edit.controller.js" />
     <Content Include="app\admin\groups\edit\group-edit.view.html" />

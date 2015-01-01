@@ -46,13 +46,14 @@
                 <h5 class="sidebartitle">Navigation</h5>
                 <ul class="nav nav-pills nav-stacked nav-bracket">
                     <li><a ui-sref="dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
-                    <li><a ui-sref="activeUsers"><i class="fa fa-user"></i><span>Users</span></a></li>
                     <li class="nav-parent">
-                        <a href=""><i class="fa fa-edit"></i> <span>Forms</span></a>
+                        <a href=""><i class="fa fa-edit"></i> <span>Users</span></a>
                         <ul class="children">
-                            <li><a href="general-forms.html"><i class="fa fa-caret-right"></i> General Forms</a></li>
+                            <li><a ui-sref="active-users"><i class="fa fa-caret-right"></i>Active Users</a></li>
+                            <li><a ui-sref="deleted-users"><i class="fa fa-caret-right"></i>Deleted Users</a></li>
                         </ul>
                     </li>
+                    <li><a ui-sref="groups"><i class="fa fa-home"></i> <span>Groups</span></a></li>
                 </ul>
                 <div class="infosummary">
                 </div><!-- infosummary -->
@@ -136,7 +137,9 @@
             'app/dashboard/dashboard.controller.js',
             'app/admin/users/active-users/active-user.controller.js',
             'app/admin/users/active-users/create/user-create.controller.js',
-            'app/admin/users/active-users/list/user-list.controller.js'
+            'app/admin/users/active-users/list/user-list.controller.js',
+            'app/admin/users/deleted-users/deleted-user.controller.js',
+            'app/admin/users/deleted-users/list/deleted-user-list.controller.js'
             ], function () {
                 // when all is done, execute bootstrap angular application
                 angular.bootstrap(document, ['planruApp']);

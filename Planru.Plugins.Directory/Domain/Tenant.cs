@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Plugins.Directory.WebAPI.Controllers
+namespace Planru.Plugins.Directory.Domain
 {
-    public class LocationController
+    public class Tenant
     {
+
     }
 }

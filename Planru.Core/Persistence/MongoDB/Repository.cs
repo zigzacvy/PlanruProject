@@ -22,7 +22,7 @@ namespace Planru.Core.Persistence.MongoDB
 
         public Repository(MongoDatabase database)
         {
-            _collection = database.GetCollection<TEntity>("users");
+            _collection = database.GetCollection<TEntity>(typeof(TEntity).ToString());
         }
 
         public void Add(TEntity item)

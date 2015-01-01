@@ -27,6 +27,19 @@ var app = angular
         })
         .state('active-users.create', {
             url: '/create'
+        })
+        .state('deleted-users', {
+            url: '/deleted-users',
+            views: {
+                '': {
+                    templateUrl: 'app/admin/users/deleted-users/deleted-user.view.html',
+                    controller: 'DeletedUserController'
+                },
+                'deleted-user-list@deleted-users': {
+                    templateUrl: 'app/admin/users/deleted-users/list/deleted-user-list.view.html',
+                    controller: 'DeletedUserListController'
+                }
+            }
         });
   }])
   .run(function ($rootScope) {

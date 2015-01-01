@@ -1,6 +1,7 @@
 ﻿app.controller('UserCreateController', ['$scope', '$modalInstance', 'userCtrl', 'userService',
     function ($scope, $modalInstance, userCtrl, userService) {
         var vm = this;
+        vm.passwordOption = 1;
 
         $modalInstance.result.then(function () {
 

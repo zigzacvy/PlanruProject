@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DirectoryConfigurerAdapter.cs" />
+    <Compile Include="Domain\Tenant.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Persistence\MongoDB\Repositories\UserRepository.cs" />
     <Compile Include="Persistence\Repositories\IUserRepositoty.cs" />
