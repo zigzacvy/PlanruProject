@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace Planru.Core.Services
 {
     public abstract class Service<TEntity, TDTO, TID> : IService<TDTO, TID>
+        where TDTO : DataTransferObject<TID>
     {
         protected IRepository<TEntity, TID> _repository;
 
@@ -29,32 +30,36 @@ namespace Planru.Core.Services
 
         public IEnumerable<TDTO> GetAll()
         {
-            throw new NotImplementedException();
+            var entities = _repository.GetAll();
+            return entities.Select(e => (TDTO)_typeAdapter.Adapt(e, typeof(TEntity), typeof(TDTO)));
         }
 
         public void Add(TDTO item)
         {
-            throw new NotImplementedException();
+            var entity = (TEntity)_typeAdapter.Adapt(item, typeof(TDTO), typeof(TEntity));
+            _repository.Add(entity);
         }
 
         public void Add(IEnumerable<TDTO> items)
         {
-            throw new NotImplementedException();
+            var entities = items.Select(o => (TEntity)_typeAdapter.Adapt(o, typeof(TDTO), typeof(TEntity)));
+            _repository.Add(entities);
         }
 
         public void Remove(TDTO item)
         {
-            throw new NotImplementedException();
+            var entity = (TEntity)_typeAdapter.Adapt(item, typeof(TDTO), typeof(TEntity));
+            _repository.Remove(entity);
         }
 
         public void Remove(IEnumerable<TDTO> items)
         {
-            throw new NotImplementedException();
+            
         }
 
-        public void Remove(object id)
+        public void Remove(TID id)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void Remove(IEnumerable<TID> ids)

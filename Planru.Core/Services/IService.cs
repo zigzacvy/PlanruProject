@@ -14,7 +14,7 @@ namespace Planru.Core.Services
         void Add(IEnumerable<TDTO> items);
         void Remove(TDTO item);
         void Remove(IEnumerable<TDTO> items);
-        void Remove(object id);
+        void Remove(TID id);
         void Remove(IEnumerable<TID> ids);
         void Modify(TDTO item);
         void Modify(IEnumerable<TDTO> items);
