@@ -1,32 +1,37 @@
 ﻿app.service('userService', ['$resource', '$q', function ($resource, $q) {
+    var User = $resource('/user/:userId', { userId: '@id' });
 
     var service = {
-        getActiveUsers: getActiveUsers
+        getActiveUsers: getActiveUsers,
+        addUser: addUser,
+        removeUser: removeUser,
+        getUser: getUser,
+        updateUser: updateUser
     };
 
     return service;
 
     function getActiveUsers(page, count) {
-        var data = [{ name: "Moroni", age: 50 },
-                    { name: "Tiancum", age: 43 },
-                    { name: "Jacob", age: 27 },
-                    { name: "Nephi", age: 29 },
-                    { name: "Enos", age: 34 },
-                    { name: "Tiancum", age: 43 },
-                    { name: "Jacob", age: 27 },
-                    { name: "Nephi", age: 29 },
-                    { name: "Enos", age: 34 },
-                    { name: "Tiancum", age: 43 },
-                    { name: "Jacob", age: 27 },
-                    { name: "Nephi", age: 29 },
-                    { name: "Enos", age: 34 },
-                    { name: "Tiancum", age: 43 },
-                    { name: "Jacob", age: 27 },
-                    { name: "Nephi", age: 29 },
-                    { name: "Enos", age: 34 }];
+        return User.get({page: page, count: count}).$promise;
+    }
 
-        return $q(function (resolve, reject) {
-            resolve(data.slice((page - 1) * count, page * count));
-        });
+    function addUser(user) {
+
+    }
+
+    function removeUser(id) {
+
+    }
+
+    function getUser(id) {
+
+    }
+
+    function updateUser(user) {
+
+    }
+
+    function getDeletedUsers() {
+
     }
 }]);
