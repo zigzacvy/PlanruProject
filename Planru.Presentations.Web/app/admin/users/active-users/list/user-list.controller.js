@@ -1,7 +1,7 @@
 ﻿app.controller('UserListController', ['$scope', 'ngTableParams', 'userService', function ($scope, ngTableParams, userService) {
 
-    userService.getActiveUsers(1, 10).then(function () {
-        console.log('done');
+    userService.getActiveUsers(1, 10).then(function (response) {
+        console.log(response);
     });
 
     var data = [{ name: "Moroni", age: 50 },
