@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Planru.Plugins.Directory.Services
 {
-    public class UserService : Service<User, UserDTO, Guid>, IService<UserDTO, Guid>
+    public class UserService : Service<User, UserDTO, Guid>, IUserService
     {
         public UserService(ITypeAdapter typeAdapter, IUserRepository repository)
             : base(typeAdapter, repository)

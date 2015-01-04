@@ -20,24 +20,12 @@ using System.Linq.Expressions;
 using AutoMapper;
 using Planru.Plugins.Directory.Services.DTOs;
 using Planru.Crosscutting.Adapter.Automapper;
+using Planru.Crosscutting.Adapter;
 
 namespace Planru.Research.MongoDB.Console
 {
-    public interface IMemberConfiguration<T>
-    {
-        void MapForm(Expression<Func<T, object>> memberOptions);
-    }
-
-    
-
-
     public class Program
     {
-        public static void ForMember<TSource, TDestination>(Expression<Func<TDestination, object>> destinationMember, Action<IMemberConfiguration<TSource>> memberOptions)
-        {
-
-        }
-
         static void Main(string[] args)
         {
 
@@ -46,27 +34,43 @@ namespace Planru.Research.MongoDB.Console
             //Mapper.CreateMap<User, UserDTO>().ForMember(d => d.FirstName, m => m.MapFrom(s => s.LastName));
             //Mapper.CreateMap<User, UserDTO>().ForMember(d => d.LastName, m => m.MapFrom(s => s.FirstName));
 
-            AutomapperTypeAdapter a = new AutomapperTypeAdapter();
-            a.CreateMap<User, UserDTO>()
-                .ForMember(d => d.FirstName, m => m.MapFrom(s => s.LastName))
-                .ForMember(d => d.LastName, m => m.MapFrom(s => s.FirstName));
+            //AutomapperTypeAdapter a = new AutomapperTypeAdapter();
+            //a.CreateMap<User, UserDTO>()
+            //    .ForMember(d => d.FirstName, m => m.MapFrom(s => s.LastName))
+            //    .ForMember(d => d.LastName, m => m.MapFrom(s => s.FirstName));
 
-            User user = new User() { FirstName = "Liep", LastName = "Nguyen" };
-            var userDto = a.Adapt<UserDTO>(user);
+            //User user = new User() { FirstName = "Liep", LastName = "Nguyen" };
+            //var userDto = a.Adapt<UserDTO>(user);
 
            
 
-            //var credential = MongoCredential.CreateMongoCRCredential("planru_system", "liepnguyen", "@dmin348");
+            var credential = MongoCredential.CreateMongoCRCredential("planru_system", "liepnguyen", "@dmin348");
 
-            //var settings = new MongoClientSettings
-            //{
-            //    Credentials = new[] { credential },
-            //    Server = new MongoServerAddress("ds055680.mongolab.com", 55680)
-            //};
+            var settings = new MongoClientSettings
+            {
+                Credentials = new[] { credential },
+                Server = new MongoServerAddress("ds055680.mongolab.com", 55680)
+            };
 
-            //var client = new MongoClient(settings);
-            //var server = client.GetServer();
-            //var database = server.GetDatabase("planru_system");
+            var client = new MongoClient(settings);
+            var server = client.GetServer();
+            var database = server.GetDatabase("planru_system");
+
+            ITypeAdapter typeAdapter = new AutomapperTypeAdapter();
+
+            IContainer container = new UnityContainer();
+            container.RegisterInstance<MongoDatabase>(database);
+            container.RegisterInstance<ITypeAdapter>(typeAdapter);
+            container.Register<IUserRepository, UserRepository>();
+            container.Register<IUserService, UserService>();
+
+            typeAdapter.CreateMap<User, UserDTO>();
+            typeAdapter.CreateMap<UserDTO, User>();
+
+            var userService = container.Resolve<IUserService>();
+            //userService.Add(new UserDTO() { Id = Guid.NewGuid(), FirstName = "Liep", LastName = "Nguyen" });
+
+            userService.Remove(new Guid[] { new Guid("effc148f-fd18-4814-8de7-b7f8aeb3f525"), new Guid("2e8f64e4-c4fa-4f6a-bda5-7b2f865d11eb") });
 
             //var userCollection = database.GetCollection<User>("Users");
 
@@ -87,9 +91,7 @@ namespace Planru.Research.MongoDB.Console
 
             //userCollection.Save(user);
 
-            //IContainer container = new UnityContainer();
-            //container.RegisterInstance<MongoDatabase>(database);
-            //container.Register<IUserRepository, UserRepository>();
+            
 
             //var userSvc = container.Resolve<IUserService>();
 

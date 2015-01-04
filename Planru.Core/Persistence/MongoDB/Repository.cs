@@ -22,7 +22,7 @@ namespace Planru.Core.Persistence.MongoDB
 
         public Repository(MongoDatabase database)
         {
-            _collection = database.GetCollection<TEntity>(typeof(TEntity).ToString());
+            _collection = database.GetCollection<TEntity>(typeof(TEntity).Name.ToLower());
         }
 
         public void Add(TEntity item)
@@ -43,6 +43,17 @@ namespace Planru.Core.Persistence.MongoDB
         public void Remove(TID id)
         {
             _collection.Remove(Query.EQ("_id", BsonValue.Create(id)));
+        }
+
+        public void Remove(IEnumerable<TEntity> items)
+        {
+            IEnumerable<TID> ids = items.Select(o => o.Id);
+            Remove(ids);
+        }
+
+        public void Remove(IEnumerable<TID> ids)
+        {
+            _collection.Remove(Query.In("_id", BsonArray.Create(ids)));
         }
 
         public void Modify(TEntity item)

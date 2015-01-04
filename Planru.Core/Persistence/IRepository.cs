@@ -35,6 +35,10 @@ namespace Planru.Core.Persistence
         /// <param name="id"></param>
         void Remove(TID id);
 
+        void Remove(IEnumerable<TEntity> items);
+
+        void Remove(IEnumerable<TID> ids);
+
         /// <summary>
         /// Set item as modified
         /// </summary>
