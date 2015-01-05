@@ -23,5 +23,7 @@ namespace Planru.Crosscutting.IoC
         T Resolve<T>();
 
         object Resolve(Type T);
+
+        IEnumerable<object> ResolveAll(Type T);
     }
 }

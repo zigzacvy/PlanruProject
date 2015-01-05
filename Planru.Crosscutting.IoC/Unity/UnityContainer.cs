@@ -48,6 +48,11 @@ namespace Planru.Crosscutting.IoC.Unity
             return _unityContainer.Resolve(T);
         }
 
+        public IEnumerable<object> ResolveAll(Type T)
+        {
+            return _unityContainer.ResolveAll(T);
+        }
+
         public void Dispose()
         {
             _unityContainer.Dispose();

@@ -1,7 +1,6 @@
 ﻿using Planru.Core.Domain;
 using Planru.Core.Persistence;
 using Planru.Crosscutting.Adapter;
-using Planru.Crosscutting.IoC.Anotations;
 using System;
 using System.Collections.Generic;
 using System.Linq;

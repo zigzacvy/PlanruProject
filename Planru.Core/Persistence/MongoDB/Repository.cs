@@ -11,7 +11,6 @@ using MongoDB.Driver.Linq;
 using System.Data.Entity.Design.PluralizationServices;
 using MongoDB.Driver.Builders;
 using MongoDB.Bson;
-using Planru.Crosscutting.IoC.Anotations;
 
 namespace Planru.Core.Persistence.MongoDB
 {

@@ -2,6 +2,7 @@
 using Planru.Plugins.Directory.Domain;
 using Planru.Plugins.Directory.Persistence;
 using Planru.Plugins.Directory.Persistence.Repositories;
+using Planru.Plugins.Directory.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,13 @@ namespace Planru.Plugins.Directory.WebAPI.Controllers
 {
     public class UserController : ApiController
     {
+        private IUserService _userService;
+
+        public UserController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
         // GET api/values
         public IEnumerable<string> Get()
         {
