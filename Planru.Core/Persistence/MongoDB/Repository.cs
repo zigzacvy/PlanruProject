@@ -53,7 +53,7 @@ namespace Planru.Core.Persistence.MongoDB
 
         public void Remove(IEnumerable<TID> ids)
         {
-            _collection.Remove(Query.In("_id", BsonArray.Create(ids)));
+            _collection.Remove(Query.In("_id", new BsonArray(ids)));
         }
 
         public void Modify(TEntity item)
