@@ -9,6 +9,9 @@ using System.Web.Routing;
 using Microsoft.Practices.Unity;
 using System.Web.Http.Dispatcher;
 using Planru.Core.WebAPI.Resolvers;
+using Planru.Core.Plugin.WebAPI;
+using System.Reflection;
+using System.IO;
 
 namespace Planru.DistributedServices.WebAPI
 {
@@ -22,6 +25,7 @@ namespace Planru.DistributedServices.WebAPI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            PluginConfig.ConfigPlugins();
         }
     }
 }
