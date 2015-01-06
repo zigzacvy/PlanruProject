@@ -15,7 +15,7 @@ namespace Planru.DistributedServices.WebAPI
             var settings = new MongoClientSettings
             {
                 Credentials = new[] { credential },
-                Server = new MongoServerAddress("ds055680.mongolab.com", 55680)
+                Server = new MongoServerAddress("localhost", 27017)
             };
 
             var client = new MongoClient(settings);

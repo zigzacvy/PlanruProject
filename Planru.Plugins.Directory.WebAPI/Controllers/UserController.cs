@@ -26,23 +26,27 @@ namespace Planru.Plugins.Directory.WebAPI.Controllers
         }
 
         // GET api/values
-        public IEnumerable<string> Get()
+        public IEnumerable<UserDTO> Get()
         {
-            var user = new User() { FirstName = "Liep", LastName = "Nguyen" };
-            var userDto = _typeAdapter.Adapt<UserDTO>(user);
-
-            return new string[] { "value1", "value2" };
+            return _userService.GetAll();
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public IHttpActionResult Get(Guid id)
         {
-            return "value";
+            var user = _userService.Get(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(user);
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post(UserDTO user)
         {
+
         }
 
         // PUT api/values/5
