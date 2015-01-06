@@ -1,5 +1,9 @@
 ﻿using MongoDB.Driver;
+using Planru.Core.Plugin.WebAPI;
+using Planru.Crosscutting.Adapter;
+using Planru.Crosscutting.Adapter.Automapper;
 using Planru.Crosscutting.IoC;
+using Planru.Crosscutting.IoC.Unity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +13,9 @@ namespace Planru.DistributedServices.WebAPI
 {
     public class IoCConfig
     {
-        private static Lazy<IContainer> container = new Lazy<IContainer>(() =>
+        private static Lazy<IContainer> _container = new Lazy<IContainer>(() =>
         {
-            var container = ContainerFactory.CreateContainer();
+            var container = new UnityContainer();
             RegisterTypes(container);
             return container;
         });
@@ -21,25 +25,13 @@ namespace Planru.DistributedServices.WebAPI
         /// </summary>
         public static IContainer GetConfiguredContainer()
         {
-            return container.Value;
+            return _container.Value;
         }
 
         public static void RegisterTypes(IContainer container)
         {
-            // Temporarily config for testing
-            var credential = MongoCredential.CreateMongoCRCredential("planru_system", "liepnguyen", "@dmin348");
-
-            var settings = new MongoClientSettings
-            {
-                Credentials = new[] { credential },
-                Server = new MongoServerAddress("ds055680.mongolab.com", 55680)
-            };
-
-            var client = new MongoClient(settings);
-            var server = client.GetServer();
-            var database = server.GetDatabase("planru_system");
-
-
+            container.Register<ITypeAdapterFactory, AutomapperTypeAdapterFactory>();
+            container.RegisterInstance<ITypeAdapter>(container.Resolve<ITypeAdapterFactory>().Create());
         }
     }
 }

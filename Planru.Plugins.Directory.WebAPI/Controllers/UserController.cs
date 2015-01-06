@@ -1,4 +1,5 @@
 ﻿using Planru.Core.Persistence;
+using Planru.Crosscutting.Adapter;
 using Planru.Plugins.Directory.Domain;
 using Planru.Plugins.Directory.Persistence;
 using Planru.Plugins.Directory.Persistence.Repositories;
@@ -15,10 +16,11 @@ namespace Planru.Plugins.Directory.WebAPI.Controllers
     public class UserController : ApiController
     {
         private IUserService _userService;
+        private ITypeAdapter _typeAdapter;
 
-        public UserController(IUserService userService)
+        public UserController(ITypeAdapter typeAdapter)
         {
-            _userService = userService;
+            _typeAdapter = typeAdapter;
         }
 
         // GET api/values

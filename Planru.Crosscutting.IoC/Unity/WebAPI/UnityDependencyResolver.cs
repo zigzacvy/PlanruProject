@@ -7,10 +7,9 @@ using System.Web.Http.Dependencies;
 
 namespace Planru.Crosscutting.IoC.Unity.WebAPI
 {
-    public class UnityDependencyResolver : IDependencyResolver
+    public class UnityDependencyResolver : IDependencyResolver, IDependencyScope
     {
         private IContainer _container;
-
         public UnityDependencyResolver(IContainer container)
         {
             _container = container;
@@ -47,7 +46,7 @@ namespace Planru.Crosscutting.IoC.Unity.WebAPI
 
         public void Dispose()
         {
-            //TODO:
+            // TODO:
         }
     }
 }
