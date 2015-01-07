@@ -65,6 +65,11 @@ namespace Planru.Core.Persistence.MongoDB
             _collection.Save(items);
         }
 
+        public bool Exists(TID id)
+        {
+            return _collection.AsQueryable<TEntity>().Any(e => e.Id.Equals(id));
+        }
+
         public void TrackItem(TEntity item)
         {
             throw new NotImplementedException();
@@ -103,7 +108,7 @@ namespace Planru.Core.Persistence.MongoDB
 
         public void Dispose()
         {
-            // TODO:
+            
         }
     }
 }

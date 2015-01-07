@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Net.Http;
+using System.Net;
 
 namespace Planru.Plugins.Directory.WebAPI.Controllers
 {
@@ -25,13 +27,11 @@ namespace Planru.Plugins.Directory.WebAPI.Controllers
             _userService = userService;
         }
 
-        // GET api/values
         public IEnumerable<UserDTO> Get()
         {
             return _userService.GetAll();
         }
 
-        // GET api/values/5
         public IHttpActionResult Get(Guid id)
         {
             var user = _userService.Get(id);
@@ -43,20 +43,20 @@ namespace Planru.Plugins.Directory.WebAPI.Controllers
             return Ok(user);
         }
 
-        // POST api/values
-        public void Post(UserDTO user)
+        public IHttpActionResult Post(UserDTO user)
         {
-
+            _userService.Add(user);
+            return Created<UserDTO>(Url.Link("DefaultApi", new { id = user.Id }), user);
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(UserDTO user)
         {
+            _userService.Modify(user);
         }
 
-        // DELETE api/values/5
-        public void Delete(int id)
+        public void Delete(Guid id)
         {
+            _userService.Remove(id);
         }
     }
 }

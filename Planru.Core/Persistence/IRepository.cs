@@ -30,7 +30,7 @@ namespace Planru.Core.Persistence
         void Remove(TEntity item);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="id"></param>
         void Remove(TID id);
@@ -70,6 +70,13 @@ namespace Planru.Core.Persistence
         /// </summary>
         /// <returns>List of selected elements</returns>
         IEnumerable<TEntity> GetAll();
+
+        /// <summary>
+        /// Checks whether entity with provided id exists
+        /// </summary>
+        /// <param name="id">Entity key value</param>
+        /// <returns>True/False</returns>
+        bool Exists(TID id);
 
         /// <summary>
         /// Get all elements of type TEntity that matching a
