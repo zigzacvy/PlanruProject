@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Net.Http;
 using System.Net;
+using Planru.Crosscutting.Infrastructure;
 
 namespace Planru.Plugins.Directory.WebAPI.Controllers
 {
@@ -27,9 +28,14 @@ namespace Planru.Plugins.Directory.WebAPI.Controllers
             _userService = userService;
         }
 
-        public IEnumerable<UserDTO> Get()
+        public PageResult<UserDTO> Get(int? count, int? page)
         {
-            return _userService.GetAll();
+            var pageNumber = page ?? 0;
+            var pageSize = count ?? 10;
+
+            var pageResult = _userService.GetPaged(pageNumber, pageSize);
+
+            return pageResult;
         }
 
         public IHttpActionResult Get(Guid id)

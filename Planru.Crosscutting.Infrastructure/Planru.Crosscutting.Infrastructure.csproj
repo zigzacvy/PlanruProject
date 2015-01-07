@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA3FADFF-955B-4D20-94D0-9CB1FE32DEF6}</ProjectGuid>
+    <ProjectGuid>{92592EEA-4F49-4422-9E76-A0B3BA6D8D55}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Planru.Core.Plugin</RootNamespace>
-    <AssemblyName>Planru.Core.Plugin</AssemblyName>
+    <RootNamespace>Planru.Crosscutting.Infrastructure</RootNamespace>
+    <AssemblyName>Planru.Crosscutting.Infrastructure</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,17 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Planru.Crosscutting.Adapter\Planru.Crosscutting.Adapter.csproj">
-      <Project>{c4ff9d0b-2f25-40e3-868f-a94057ad90a0}</Project>
-      <Name>Planru.Crosscutting.Adapter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Planru.CrossCutting.IoC\Planru.Crosscutting.IoC.csproj">
-      <Project>{2044441e-908a-4a87-8c1c-55f241d09980}</Project>
-      <Name>Planru.Crosscutting.IoC</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

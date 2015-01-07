@@ -1,5 +1,6 @@
 ﻿using Planru.Core.Domain;
 using Planru.Core.Domain.Specification;
+using Planru.Crosscutting.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -89,12 +90,12 @@ namespace Planru.Core.Persistence
         /// <summary>
         /// Get all elements of type TEntity in repository
         /// </summary>
-        /// <param name="pageIndex">Page index</param>
+        /// <param name="pageNumber">Page index</param>
         /// <param name="pageSize">Number of elements in each page</param>
         /// <param name="orderByExpression">Order by expression for this query</param>
         /// <param name="ascending">Specify if order is ascending</param>
         /// <returns>List of selected elements</returns>
-        IEnumerable<TEntity> GetPaged<KProperty>(int pageIndex, int pageCount, Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending);
+        PageResult<TEntity> GetPaged<KProperty>(int pageNumber, int pageSize, Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending);
 
         /// <summary>
         /// Get  elements of type TEntity in repository
@@ -102,5 +103,7 @@ namespace Planru.Core.Persistence
         /// <param name="filter">Filter that each element do match</param>
         /// <returns>List of selected elements</returns>
         IEnumerable<TEntity> GetFiltered(Expression<Func<TEntity, bool>> filter);
+
+        long Count();
     }
 }

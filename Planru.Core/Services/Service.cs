@@ -1,9 +1,11 @@
 ﻿using Planru.Core.Domain;
 using Planru.Core.Persistence;
 using Planru.Crosscutting.Adapter;
+using Planru.Crosscutting.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,6 +34,14 @@ namespace Planru.Core.Services
         {
             var entities = _repository.GetAll();
             return ConvertToDTOs(entities);
+        }
+
+        public PageResult<TDTO> GetPaged(int pageNumber, int pageSize)
+        {
+            var pageResult = _repository.GetPaged<DateTime?>(
+                pageNumber, pageSize, e => e.CreatedDateTime, true);
+
+            return new PageResult<TDTO>(ConvertToDTOs(pageResult.Items), pageNumber, pageSize, pageResult.TotalItems);
         }
 
         public void Add(TDTO item)

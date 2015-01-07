@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Planru.Core
+namespace Planru.Plugins.Directory
 {
-    public interface ICoreConfigurer
+    public class Configurer
     {
 
     }

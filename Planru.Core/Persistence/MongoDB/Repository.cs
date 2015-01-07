@@ -11,6 +11,7 @@ using MongoDB.Driver.Linq;
 using System.Data.Entity.Design.PluralizationServices;
 using MongoDB.Driver.Builders;
 using MongoDB.Bson;
+using Planru.Crosscutting.Infrastructure;
 
 namespace Planru.Core.Persistence.MongoDB
 {
@@ -90,7 +91,7 @@ namespace Planru.Core.Persistence.MongoDB
             return _collection.Find(Query<TEntity>.Where(specification.SatisfiedBy())).AsEnumerable();
         }
 
-        public IEnumerable<TEntity> GetPaged<KProperty>(int pageIndex, int pageCount, Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending)
+        public PageResult<TEntity> GetPaged<KProperty>(int pageNumber, int pageSize, Expression<Func<TEntity, KProperty>> orderByExpression, bool ascending)
         {
             IEnumerable<TEntity> result;
             if (ascending)
@@ -98,12 +99,17 @@ namespace Planru.Core.Persistence.MongoDB
             else
                 result = _collection.AsQueryable().OrderByDescending(orderByExpression);
 
-            return result.Skip(pageIndex * pageCount).Take(pageCount);
+            return new PageResult<TEntity>(result.Skip(pageNumber * pageSize).Take(pageSize), pageNumber, pageSize, this.Count());
         }
 
         public IEnumerable<TEntity> GetFiltered(Expression<Func<TEntity, bool>> filter)
         {
             return _collection.Find(Query<TEntity>.Where(filter)).AsEnumerable();
+        }
+
+        public long Count()
+        {
+            return _collection.Count();
         }
 
         public void Dispose()

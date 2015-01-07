@@ -9,5 +9,6 @@ namespace Planru.Core.Domain
     public abstract class Entity<TID>
     {
         public virtual TID Id { get; set; }
+        public virtual DateTime? CreatedDateTime { get; set; }
     }
 }

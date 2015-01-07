@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Planru.Crosscutting.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Planru.Core.Services
     {
         TDTO Get(TID id);
         IEnumerable<TDTO> GetAll();
+        PageResult<TDTO> GetPaged(int pageNumber, int pageSize);
         void Add(TDTO item);
         void Add(IEnumerable<TDTO> items);
         void Remove(TDTO item);

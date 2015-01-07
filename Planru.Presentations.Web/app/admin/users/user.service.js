@@ -1,5 +1,5 @@
 ﻿app.service('userService', ['$resource', '$q', function ($resource, $q) {
-    var User = $resource('/planru-api/api/user/:userId', { userId: '@id' });
+    var User = $resource('/par-api/api/user/:userId', { userId: '@id' });
 
     var service = {
         getActiveUsers: getActiveUsers,
