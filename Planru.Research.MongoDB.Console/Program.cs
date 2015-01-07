@@ -70,7 +70,18 @@ namespace Planru.Research.MongoDB.Console
             var userService = container.Resolve<IUserService>();
             //userService.Add(new UserDTO() { Id = Guid.NewGuid(), FirstName = "Liep", LastName = "Nguyen" });
 
-            userService.Remove(new Guid[] { new Guid("effc148f-fd18-4814-8de7-b7f8aeb3f525"), new Guid("2e8f64e4-c4fa-4f6a-bda5-7b2f865d11eb") });
+            for (int i = 0; i < 100; i++)
+            {
+                var user = new UserDTO()
+                {
+                    Id = Guid.NewGuid(),
+                    DisplayName = "Liep Nguyen",
+                    FirstName = "Liep",
+                    LastName = "Nguyen"
+                };
+
+                userService.Add(user);
+            }
 
             //var userCollection = database.GetCollection<User>("Users");
 

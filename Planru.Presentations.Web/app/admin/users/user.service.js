@@ -12,7 +12,7 @@
     return service;
 
     function getActiveUsers(page, count) {
-        return User.query({page: page, count: count}).$promise;
+        return User.get({page: page, count: count}).$promise;
     }
 
     function addUser(user) {

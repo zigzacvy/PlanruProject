@@ -11,5 +11,7 @@ namespace Planru.Plugins.Directory.Services.DTOs
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string UserName { get; set; }
+        public string DisplayName { get; set; }
     }
 }

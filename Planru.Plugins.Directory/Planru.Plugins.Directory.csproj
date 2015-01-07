@@ -92,6 +92,10 @@
       <Project>{c4ff9d0b-2f25-40e3-868f-a94057ad90a0}</Project>
       <Name>Planru.Crosscutting.Adapter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Planru.Crosscutting.Infrastructure\Planru.Crosscutting.Infrastructure.csproj">
+      <Project>{92592eea-4f49-4422-9e76-a0b3ba6d8d55}</Project>
+      <Name>Planru.Crosscutting.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
